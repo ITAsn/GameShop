@@ -10,34 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GameShop
+namespace GameShop.Win
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Autorization.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Autorization : Window
     {
-        public MainWindow()
+        public Autorization()
         {
             InitializeComponent();
-        }
-
-        private void SettingOpen(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AboutUs(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ExitButton(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

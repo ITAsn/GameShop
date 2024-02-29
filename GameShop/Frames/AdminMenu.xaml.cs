@@ -13,31 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GameShop
+namespace GameShop.Frames
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AdminMenu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AdminMenu : Page
     {
-        public MainWindow()
+        public AdminMenu()
         {
             InitializeComponent();
-        }
-
-        private void SettingOpen(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AboutUs(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ExitButton(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

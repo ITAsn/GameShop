@@ -5,8 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameShop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Магазин" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+
+        </Grid.ColumnDefinitions>
+        <Menu>
+            <MenuItem Header="Общее">
+                <MenuItem Click="SettingOpen" Header="Настроки"></MenuItem>
+                <MenuItem Click="AboutUs" Header="О нас"></MenuItem>
+                <MenuItem Header="Выход" Click="ExitButton"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Аккаунт">
+                <MenuItem Name="UserName"/>
+                <MenuItem Header="Выйти из аккаунта"/>
+
+            </MenuItem>
+        </Menu>
+        <Grid Margin="0,3,0,-416" HorizontalAlignment="Center" Grid.Column="1" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Button  Margin="3" Width="130">Магазин</Button>
+            <Button Grid.Row="1" Margin="3" Width="130">Библиотека</Button>
+            <Button Grid.Row="2" Margin="0,0,6,-353" Width="130" VerticalAlignment="Bottom">Назад</Button>
+        </Grid>
+        <Frame Grid.Row="1"></Frame>
+
     </Grid>
 </Window>
