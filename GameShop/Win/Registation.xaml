@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameShop.Win"
         mc:Ignorable="d"
-        Title="Registation" Height="450" Width="800">
+         xmlns:rs="clr-namespace:GameShop.Languages"
+        Title="Registation" MinHeight="200" MinWidth="320" Height="200" Width="480">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
+            <TextBlock Margin="3" Grid.ColumnSpan="2" FontSize="24" Text="{x:Static rs:Language.RegistrationText}"/>
+            <Button Height="20" Margin="3" Click="Ru_Click">Ru</Button>
+            <Button Height="20" Margin="3" Click="En_Click">En</Button>
+        </StackPanel>
+
+        <Label Margin="3" Grid.Row="1" Content="{x:Static rs:Language.LoginText}"/>
+        <TextBox Name="loginText" Width="130" Height="20" HorizontalAlignment="Left" Margin="3" Grid.Column="1" Grid.Row="1"/>
+        <Label Margin="3" Grid.Row="2" Content="{x:Static rs:Language.PasswordText}"/>
+        <PasswordBox Name="passwordText" Width="130" Height="20" HorizontalAlignment="Left" Margin="3" Grid.Column="1" Grid.Row="2"/>
+        <Label Margin="3" Grid.Row="3" Content="{x:Static rs:Language.ConfirmText}"/>
+        <PasswordBox Name="passwordText1" Width="130" Height="20" HorizontalAlignment="Left" Margin="3" Grid.Column="1" Grid.Row="3"/>
+        <StackPanel Grid.Column="1"  HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="4">
+            <Button Margin="3" Grid.Row="3" Width="70" Content="{x:Static rs:Language.RegistrationText}" Click="RegistrationClick"/>
+            <Button Margin="3" Grid.Row="3" Width="50" Content="{x:Static rs:Language.CloseText}" Click="Close_Click"/>
+
+        </StackPanel>
     </Grid>
 </Window>

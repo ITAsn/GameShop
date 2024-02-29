@@ -123,6 +123,9 @@
   <data name="CloseText" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>Password confirmation</value>
+  </data>
   <data name="EnterButton" xml:space="preserve">
     <value>Enter</value>
   </data>

@@ -79,6 +79,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Password confirmation.
+        /// </summary>
+        public static string ConfirmText {
+            get {
+                return ResourceManager.GetString("ConfirmText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Enter.
         /// </summary>
         public static string EnterButton {
