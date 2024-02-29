@@ -14,5 +14,9 @@ namespace GameShop
     public partial class App : Application
     {
         public static System.Windows.Controls.Frame frame = new System.Windows.Controls.Frame();
+        App()
+        {
+
+        }
     }
 }

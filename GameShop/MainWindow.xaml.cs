@@ -23,6 +23,7 @@ namespace GameShop
         public MainWindow()
         {
             InitializeComponent();
+            App.frame = mainFrame;
         }
 
         private void SettingOpen(object sender, RoutedEventArgs e)
