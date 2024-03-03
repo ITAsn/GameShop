@@ -61,11 +61,47 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на AboutUs.
+        /// </summary>
+        public static string AboutUsText {
+            get {
+                return ResourceManager.GetString("AboutUsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Account.
+        /// </summary>
+        public static string AccountText {
+            get {
+                return ResourceManager.GetString("AccountText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Autorization.
         /// </summary>
         public static string AutorizationText {
             get {
                 return ResourceManager.GetString("AutorizationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Back.
+        /// </summary>
+        public static string BackText {
+            get {
+                return ResourceManager.GetString("BackText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You can go back!.
+        /// </summary>
+        public static string CantBackText {
+            get {
+                return ResourceManager.GetString("CantBackText", resourceCulture);
             }
         }
         
@@ -106,11 +142,38 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Exit.
+        /// </summary>
+        public static string ExitExitText {
+            get {
+                return ResourceManager.GetString("ExitExitText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Do you really want to get out?.
         /// </summary>
         public static string ExitText {
             get {
                 return ResourceManager.GetString("ExitText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на General.
+        /// </summary>
+        public static string GeneralText {
+            get {
+                return ResourceManager.GetString("GeneralText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Library.
+        /// </summary>
+        public static string LibraryText {
+            get {
+                return ResourceManager.GetString("LibraryText", resourceCulture);
             }
         }
         
@@ -142,6 +205,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Popular Games:.
+        /// </summary>
+        public static string PopularText {
+            get {
+                return ResourceManager.GetString("PopularText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Question.
         /// </summary>
         public static string QuestionText {
@@ -156,6 +228,33 @@ namespace GameShop.Languages {
         public static string RegistrationText {
             get {
                 return ResourceManager.GetString("RegistrationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Search.
+        /// </summary>
+        public static string SearchText {
+            get {
+                return ResourceManager.GetString("SearchText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Setting.
+        /// </summary>
+        public static string SettingText {
+            get {
+                return ResourceManager.GetString("SettingText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Shop.
+        /// </summary>
+        public static string ShopText {
+            get {
+                return ResourceManager.GetString("ShopText", resourceCulture);
             }
         }
     }

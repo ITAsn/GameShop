@@ -18,11 +18,47 @@ namespace GameShop.Frames
     /// <summary>
     /// Логика взаимодействия для Shop.xaml
     /// </summary>
+    public class Game
+    {
+        public int Id { get; set; }
+        public  BitmapImage path { get; set; }
+        public string Name { get; set; }
+        public string Cost { get; set; }
+
+
+
+    }
     public partial class Shop : Page
     {
         public Shop()
         {
             InitializeComponent();
+            Game game = new Game();
+            game.Id = 0;
+            game.Name = "Tetris";
+            game.Cost = "Cost: " + 120 + "r";
+            game.path = new BitmapImage(new Uri("/Photos/noImage.png", UriKind.Relative));
+            shopList1.Items.Add(game);
+            Game game1 = new Game();
+            game1.Id = 0;
+            game1.Name = "Speed";
+            game1.path = new BitmapImage(new Uri("/Photos/noImage.png", UriKind.Relative));
+            game1.Cost = "Cost: " + 300 + "r";
+            shopList1.Items.Add(game1);
+        }
+
+     
+
+        private void OpenSearch(object sender, RoutedEventArgs e)
+        {
+            ShopSearch shopSearch = new ShopSearch();
+            App.frame.Navigate(shopSearch);
+        }
+
+        private void ListBoxItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            ShopAbout shopAbout = new ShopAbout();
+            App.frame.Navigate(shopAbout);
         }
     }
 }

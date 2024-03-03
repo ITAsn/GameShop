@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameShop"
         mc:Ignorable="d"
-        Title="Магазин" Height="450" Width="800">
+        xmlns:rs="clr-namespace:GameShop.Languages"
+        Title="{x:Static rs:Language.ShopText}" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -19,24 +20,24 @@
 
         </Grid.ColumnDefinitions>
         <Menu>
-            <MenuItem Header="Общее">
-                <MenuItem Click="SettingOpen" Header="Настроки"></MenuItem>
-                <MenuItem Click="AboutUs" Header="О нас"></MenuItem>
-                <MenuItem Header="Выход" Click="ExitButton"></MenuItem>
+            <MenuItem Header="{x:Static rs:Language.GeneralText}">
+                <MenuItem Click="SettingOpen" Header="{x:Static rs:Language.SettingText}"></MenuItem>
+                <MenuItem Click="AboutUs" Header="{x:Static rs:Language.AboutUsText}"></MenuItem>
+                <MenuItem Header="{x:Static rs:Language.ExitExitText}" Click="ExitButton"></MenuItem>
             </MenuItem>
-            <MenuItem Header="Аккаунт">
+            <MenuItem Header="{x:Static rs:Language.AccountText}">
                 <MenuItem Name="UserName"/>
                 <MenuItem Header="Выйти из аккаунта"/>
                 
             </MenuItem>
         </Menu>
         <StackPanel Margin="3" HorizontalAlignment="Right" Grid.Column="1" Grid.RowSpan="2">
-          
-            <Button  Margin="3" Width="130">Магазин</Button>
-            <Button  Margin="3" Width="130">Библиотека</Button>
-            <Button Margin="3" Width="130" VerticalAlignment="Bottom">Назад</Button>
+
+            <Button  Margin="3" Width="130" Click="Shop_Open" Content="{x:Static rs:Language.ShopText}"></Button>
+            <Button  Margin="3" Width="130" Content="{x:Static rs:Language.LibraryText}" Click="LibraryOpen"></Button>
+            <Button Margin="3" Width="130" VerticalAlignment="Bottom" Content="{x:Static rs:Language.BackText}" Click="Button_Click"></Button>
         </StackPanel>
-        <Frame Name="mainFrame" Grid.Row="1"></Frame>
+        <Frame NavigationUIVisibility="Hidden" Name="mainFrame" Grid.Row="1" Source="Frames/Shop.xaml"></Frame>
        
     </Grid>
 </Window>

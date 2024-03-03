@@ -59,7 +59,11 @@ namespace GameShop.Win
             {
                 try
                 {
-
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    LanCha = true;
+                    Close();
+                   
                 }catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message,Properties.Resources.ResourceManager.GetString("ErrorText"),MessageBoxButton.OK ,MessageBoxImage.Error);
