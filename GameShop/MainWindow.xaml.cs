@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameShop.Frames;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,7 +39,38 @@ namespace GameShop
 
         private void ExitButton(object sender, RoutedEventArgs e)
         {
+            Close();
+        }
+
+        private void Shop_Open(object sender, RoutedEventArgs e)
+        {
+            Shop shop = new Shop();
+            mainFrame.Navigate(shop);
+        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            
+                MessageBoxResult res = MessageBox.Show(Languages.Language.ResourceManager.GetString("ExitText"), Languages.Language.ResourceManager.GetString("QuestionText"), MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (res == MessageBoxResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(App.frame.NavigationService.CanGoBack)
+                App.frame.NavigationService.GoBack();
+            else
+                MessageBox.Show(Languages.Language.ResourceManager.GetString("CantBackText"), Languages.Language.ResourceManager.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Error);
 
         }
+
+        private void LibraryOpen(object sender, RoutedEventArgs e)
+        {
+            Library library = new Library();
+            mainFrame.Navigate(library);
+        }
     }
-}
+    }
+

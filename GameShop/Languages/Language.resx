@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutUsText" xml:space="preserve">
+    <value>AboutUs</value>
+  </data>
+  <data name="AccountText" xml:space="preserve">
+    <value>Account</value>
+  </data>
   <data name="AutorizationText" xml:space="preserve">
     <value>Autorization</value>
+  </data>
+  <data name="BackText" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="CantBackText" xml:space="preserve">
+    <value>You can go back!</value>
   </data>
   <data name="CloseText" xml:space="preserve">
     <value>Close</value>
@@ -132,8 +144,17 @@
   <data name="ErrorText" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="ExitExitText" xml:space="preserve">
+    <value>Exit</value>
+  </data>
   <data name="ExitText" xml:space="preserve">
     <value>Do you really want to get out?</value>
+  </data>
+  <data name="GeneralText" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="LibraryText" xml:space="preserve">
+    <value>Library</value>
   </data>
   <data name="LoginText" xml:space="preserve">
     <value>Login</value>
@@ -144,10 +165,22 @@
   <data name="PasswordText" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="PopularText" xml:space="preserve">
+    <value>Popular Games:</value>
+  </data>
   <data name="QuestionText" xml:space="preserve">
     <value>Question</value>
   </data>
   <data name="RegistrationText" xml:space="preserve">
     <value>Registration</value>
+  </data>
+  <data name="SearchText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SettingText" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="ShopText" xml:space="preserve">
+    <value>Shop</value>
   </data>
 </root>
