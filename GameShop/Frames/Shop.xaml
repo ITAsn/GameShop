@@ -19,18 +19,23 @@
         </StackPanel>
         <StackPanel Grid.Row="1">
             <Label Margin="3" Content="{x:Static rs:Language.PopularText}"></Label>
-            <ListBox Name="shopList1" Margin="3">
+            <ListBox  Name="shopList1" Margin="3" SelectionChanged="shopList1_SelectionChanged">
                 
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <ListBoxItem MouseDoubleClick="ListBoxItem_MouseDoubleClick" BorderBrush="Black" BorderThickness="1">
-                            <StackPanel Width="100" Height="200" >
-                                <Image HorizontalAlignment="Center" Height="120" Margin="3" Source="{Binding path}"/>
+                       
+                            <StackPanel   Width="100" MouseDown="Border_MouseDown" Height="200" >
+                                <Image HorizontalAlignment="Center" Height="120" Margin="3" Source="{Binding path1}"/>
                                 <TextBlock HorizontalAlignment="Center" Margin="3" TextWrapping="Wrap" Text="{Binding Name}"/>
-                                <Label HorizontalAlignment="Center" Margin="3" Content="{Binding Cost}"/>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Margin="3" Content="{x:Static rs:Language.costText1}"/>
+                                <Label Margin="3" Content="{Binding Cost, StringFormat={} r.}"/>
                             </StackPanel>
+                            </StackPanel>
+                        
+                       
 
-                        </ListBoxItem>
+                     
                     </DataTemplate>
                 </ListBox.ItemTemplate>
                 <ListBox.ItemsPanel>

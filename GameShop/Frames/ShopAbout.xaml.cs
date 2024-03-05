@@ -20,9 +20,23 @@ namespace GameShop.Frames
     /// </summary>
     public partial class ShopAbout : Page
     {
-        public ShopAbout()
+        Game game;
+        public ShopAbout(Game game)
         {
             InitializeComponent();
+            this.game = game;
+            nameText.Text = game.Name;
+            costText.Text = game.Cost + " руб.";
+            if (game.path != null)
+            {
+                imageBox.Source = App.ByteToImage(game.path);
+            }
+           
+        }
+
+        private void BuyButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

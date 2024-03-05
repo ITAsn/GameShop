@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutUsText" xml:space="preserve">
-    <value>AboutUs</value>
+    <value>About us</value>
   </data>
   <data name="AccountText" xml:space="preserve">
     <value>Account</value>
@@ -129,14 +129,26 @@
   <data name="BackText" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="BuyGameText" xml:space="preserve">
+    <value>Buy a game</value>
+  </data>
+  <data name="BuyGameText1" xml:space="preserve">
+    <value>Buy</value>
+  </data>
   <data name="CantBackText" xml:space="preserve">
-    <value>You can go back!</value>
+    <value>You cant go back!</value>
   </data>
   <data name="CloseText" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="ConfirmText" xml:space="preserve">
     <value>Password confirmation</value>
+  </data>
+  <data name="costText1" xml:space="preserve">
+    <value>Cost:</value>
+  </data>
+  <data name="descriptionText1" xml:space="preserve">
+    <value>Description: </value>
   </data>
   <data name="EnterButton" xml:space="preserve">
     <value>Enter</value>

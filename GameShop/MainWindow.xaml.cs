@@ -59,11 +59,16 @@ namespace GameShop
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            object frame1 = App.frame;
             if(App.frame.NavigationService.CanGoBack)
-                App.frame.NavigationService.GoBack();
+                App.frame.GoBack();
             else
                 MessageBox.Show(Languages.Language.ResourceManager.GetString("CantBackText"), Languages.Language.ResourceManager.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Error);
-
+            if (frame1 == App.frame)
+            {
+                Shop shop = new Shop();
+                App.frame.Navigate(shop);
+            }
         }
 
         private void LibraryOpen(object sender, RoutedEventArgs e)

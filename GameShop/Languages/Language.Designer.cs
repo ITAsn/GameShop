@@ -61,7 +61,7 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на AboutUs.
+        ///   Ищет локализованную строку, похожую на About us.
         /// </summary>
         public static string AboutUsText {
             get {
@@ -97,7 +97,25 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на You can go back!.
+        ///   Ищет локализованную строку, похожую на Buy a game.
+        /// </summary>
+        public static string BuyGameText {
+            get {
+                return ResourceManager.GetString("BuyGameText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Buy.
+        /// </summary>
+        public static string BuyGameText1 {
+            get {
+                return ResourceManager.GetString("BuyGameText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You cant go back!.
         /// </summary>
         public static string CantBackText {
             get {
@@ -120,6 +138,24 @@ namespace GameShop.Languages {
         public static string ConfirmText {
             get {
                 return ResourceManager.GetString("ConfirmText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Cost:.
+        /// </summary>
+        public static string costText1 {
+            get {
+                return ResourceManager.GetString("costText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Description: .
+        /// </summary>
+        public static string descriptionText1 {
+            get {
+                return ResourceManager.GetString("descriptionText1", resourceCulture);
             }
         }
         
