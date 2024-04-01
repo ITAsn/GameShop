@@ -61,6 +61,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на AAA.
+        /// </summary>
+        public static string AAAText {
+            get {
+                return ResourceManager.GetString("AAAText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на About us.
         /// </summary>
         public static string AboutUsText {
@@ -75,6 +84,15 @@ namespace GameShop.Languages {
         public static string AccountText {
             get {
                 return ResourceManager.GetString("AccountText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Action.
+        /// </summary>
+        public static string ActionText {
+            get {
+                return ResourceManager.GetString("ActionText", resourceCulture);
             }
         }
         
@@ -151,6 +169,24 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Price from:.
+        /// </summary>
+        public static string CostText2 {
+            get {
+                return ResourceManager.GetString("CostText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Price up to:.
+        /// </summary>
+        public static string CostText3 {
+            get {
+                return ResourceManager.GetString("CostText3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Description: .
         /// </summary>
         public static string descriptionText1 {
@@ -205,6 +241,24 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Genres:.
+        /// </summary>
+        public static string GenresText {
+            get {
+                return ResourceManager.GetString("GenresText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Indie.
+        /// </summary>
+        public static string IndieText {
+            get {
+                return ResourceManager.GetString("IndieText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Library.
         /// </summary>
         public static string LibraryText {
@@ -250,6 +304,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Puzzle.
+        /// </summary>
+        public static string PuzzleText {
+            get {
+                return ResourceManager.GetString("PuzzleText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Question.
         /// </summary>
         public static string QuestionText {
@@ -259,11 +322,29 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Race.
+        /// </summary>
+        public static string RaceText {
+            get {
+                return ResourceManager.GetString("RaceText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Registration.
         /// </summary>
         public static string RegistrationText {
             get {
                 return ResourceManager.GetString("RegistrationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на RPG.
+        /// </summary>
+        public static string RPGText {
+            get {
+                return ResourceManager.GetString("RPGText", resourceCulture);
             }
         }
         

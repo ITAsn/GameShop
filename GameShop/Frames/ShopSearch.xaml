@@ -19,10 +19,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,0,2">
-            <Label Margin="3" Content="Цена от:"/>
+            <Label Margin="3" Content="{x:Static rs:Language.CostText2}"/>
             <TextBox Name="CostBox1" Width="100" Height="20"></TextBox>
 
-            <Label Margin="3" Content="Цена до:"/>
+            <Label Margin="3" Content="{x:Static rs:Language.CostText3}"/>
             <TextBox Name="CostBox2" Width="100" Height="20"></TextBox>
           
 
@@ -30,22 +30,22 @@
 
         </StackPanel>
         <StackPanel  Grid.RowSpan="2" Grid.Column="1" Margin="3,3,3,3">
-            <Label Margin="3" Content="Жанры:"></Label>
+            <Label Margin="3" Content="{x:Static rs:Language.GenresText}"></Label>
             <ListBox>
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox1" Margin="3,6" Content="Гонки"></CheckBox>
+                    <CheckBox Name="CheckBox1" Margin="3,6" Content="{x:Static rs:Language.RaceText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox2" Margin="3,6" Content="RPG"></CheckBox>
+                    <CheckBox Name="CheckBox2" Margin="3,6" Content="{x:Static rs:Language.RPGText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox3" Margin="3,6" Content="Боевик"></CheckBox>
+                    <CheckBox Name="CheckBox3" Margin="3,6" Content="{x:Static rs:Language.ActionText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox4" Margin="3,6" Content="Головоломка"></CheckBox>
+                    <CheckBox Name="CheckBox4" Margin="3,6" Content="{x:Static rs:Language.PuzzleText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox5" Margin="3,6" Content="ААА"></CheckBox>
+                    <CheckBox Name="CheckBox5" Margin="3,6" Content="{x:Static rs:Language.AAAText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
                     <CheckBox Name="CheckBox6" Margin="3,6" Content="Инди"></CheckBox>

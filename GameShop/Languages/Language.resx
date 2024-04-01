@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AAAText" xml:space="preserve">
+    <value>AAA</value>
+  </data>
   <data name="AboutUsText" xml:space="preserve">
     <value>About us</value>
   </data>
   <data name="AccountText" xml:space="preserve">
     <value>Account</value>
+  </data>
+  <data name="ActionText" xml:space="preserve">
+    <value>Action</value>
   </data>
   <data name="AutorizationText" xml:space="preserve">
     <value>Autorization</value>
@@ -147,6 +153,12 @@
   <data name="costText1" xml:space="preserve">
     <value>Cost:</value>
   </data>
+  <data name="CostText2" xml:space="preserve">
+    <value>Price from:</value>
+  </data>
+  <data name="CostText3" xml:space="preserve">
+    <value>Price up to:</value>
+  </data>
   <data name="descriptionText1" xml:space="preserve">
     <value>Description: </value>
   </data>
@@ -165,6 +177,12 @@
   <data name="GeneralText" xml:space="preserve">
     <value>General</value>
   </data>
+  <data name="GenresText" xml:space="preserve">
+    <value>Genres:</value>
+  </data>
+  <data name="IndieText" xml:space="preserve">
+    <value>Indie</value>
+  </data>
   <data name="LibraryText" xml:space="preserve">
     <value>Library</value>
   </data>
@@ -180,11 +198,20 @@
   <data name="PopularText" xml:space="preserve">
     <value>Popular Games:</value>
   </data>
+  <data name="PuzzleText" xml:space="preserve">
+    <value>Puzzle</value>
+  </data>
   <data name="QuestionText" xml:space="preserve">
     <value>Question</value>
   </data>
+  <data name="RaceText" xml:space="preserve">
+    <value>Race</value>
+  </data>
   <data name="RegistrationText" xml:space="preserve">
     <value>Registration</value>
+  </data>
+  <data name="RPGText" xml:space="preserve">
+    <value>RPG</value>
   </data>
   <data name="SearchText" xml:space="preserve">
     <value>Search</value>
