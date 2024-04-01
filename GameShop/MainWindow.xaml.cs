@@ -29,12 +29,14 @@ namespace GameShop
 
         private void SettingOpen(object sender, RoutedEventArgs e)
         {
-
+            Win.SettingWindow settingWindow = new Win.SettingWindow();
+            settingWindow.ShowDialog();
         }
 
         private void AboutUs(object sender, RoutedEventArgs e)
         {
-
+            AboutUsPage aboutUsPage = new AboutUsPage();
+            mainFrame.Navigate(aboutUsPage);
         }
 
         private void ExitButton(object sender, RoutedEventArgs e)

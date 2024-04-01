@@ -23,6 +23,19 @@ namespace GameShop.Frames
         public ShopSearch()
         {
             InitializeComponent();
+            Game game = new Game();
+            game.Id = 0;
+            game.Name = "Tetris";
+            game.Cost = "120";
+            game.path1 = (new BitmapImage(new Uri("/Frames/noImage.png", UriKind.Relative)));
+            shopList1.Items.Add(game);
+            Game game1 = new Game();
+            game1.Id = 1;
+            game1.Name = "Speed";
+
+            game1.path1 = (new BitmapImage(new Uri("/Frames/noImage.png", UriKind.Relative)));
+            game1.Cost = "300";
+            shopList1.Items.Add(game1);
         }
         private void shopList1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
