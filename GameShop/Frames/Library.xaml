@@ -9,6 +9,46 @@
       Title="Library">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox Width="150"></ListBox>
+        <ScrollViewer Grid.Column="1">
+            <Grid IsEnabled="False">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="29*"/>
+                </Grid.RowDefinitions>
+                <StackPanel  Grid.Row="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Name="gameName"></TextBlock>
+                        <Button  Grid.Column="1"  Margin="5" HorizontalAlignment="Right" Width="50" Height="50"  >
+                            <Button.Template>
+                                <ControlTemplate  TargetType="Button">
+                                    <Grid>
+                                        <Ellipse Fill="DarkOrange"></Ellipse>
+                                        <Image Height="25" Source="/Photos/dow.png" HorizontalAlignment="Center"
+                               VerticalAlignment="Center"></Image>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                    </Grid>
+                    <TextBlock TextWrapping="Wrap" Margin="3" HorizontalAlignment="Left" Name="DescriptionText" Width="50"></TextBlock>
+                    <Button Width="140" >safd</Button>
+                  </StackPanel>
+
+                <Image Height="300"></Image>
+              
+            </Grid>
+        </ScrollViewer>
+      
     </Grid>
 </Page>
