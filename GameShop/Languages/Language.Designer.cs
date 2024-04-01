@@ -79,6 +79,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на This project was implemented as a graduation project by a student. This project implements the work of an online game store. This program works through a database and FTP servers..
+        /// </summary>
+        public static string AboutUsText1 {
+            get {
+                return ResourceManager.GetString("AboutUsText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Account.
         /// </summary>
         public static string AccountText {

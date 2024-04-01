@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="Settings" Height="450" Width="800">
     <Grid>
-        <TextBlock>Nothing hier right now!</TextBlock>
+        <TextBlock>Nothing here right now!</TextBlock>
     </Grid>
 </Window>

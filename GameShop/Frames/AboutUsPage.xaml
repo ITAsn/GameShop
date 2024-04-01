@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GameShop.Frames"
+       xmlns:rs="clr-namespace:GameShop.Languages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AboutUsPage">
@@ -14,6 +15,6 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Image Width="250"></Image>
-        <TextBlock Grid.Column="1" TextWrapping="Wrap" FontSize="24">Данный проект реализован как дипломный проект студентом. Данный проект реализует работы интернет магазина игр. Работает данная программа через базу данных и FTP-сервера.</TextBlock>
+        <TextBlock Grid.Column="1" TextWrapping="Wrap" FontSize="24" Text="{x:Static rs:Language.AboutUsText1}"></TextBlock>
     </Grid>
 </Page>

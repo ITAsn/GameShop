@@ -123,6 +123,9 @@
   <data name="AboutUsText" xml:space="preserve">
     <value>About us</value>
   </data>
+  <data name="AboutUsText1" xml:space="preserve">
+    <value>This project was implemented as a graduation project by a student. This project implements the work of an online game store. This program works through a database and FTP servers.</value>
+  </data>
   <data name="AccountText" xml:space="preserve">
     <value>Account</value>
   </data>
