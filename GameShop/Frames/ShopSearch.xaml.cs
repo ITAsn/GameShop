@@ -24,5 +24,12 @@ namespace GameShop.Frames
         {
             InitializeComponent();
         }
+        private void shopList1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListBoxItem listBoxItem = new ListBoxItem();
+            Game games = shopList1.SelectedItem as Game;
+            ShopAbout shopAbout = new ShopAbout(games);
+            App.frame.Navigate(shopAbout);
+        }
     }
 }

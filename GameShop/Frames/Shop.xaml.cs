@@ -68,13 +68,7 @@ namespace GameShop.Frames
             //App.frame.Navigate(shopAbout);
         }
 
-        private void shopList1_Selected(object sender, RoutedEventArgs e)
-        {
-            //ListBoxItem listBoxItem = new ListBoxItem();
-            //Game games = shopList1.SelectedItem as Game;
-            //ShopAbout shopAbout = new ShopAbout(games);
-            //App.frame.Navigate(shopAbout);
-        }
+
 
         private void shopList1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

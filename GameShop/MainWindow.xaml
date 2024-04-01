@@ -37,7 +37,7 @@
             <Button  Margin="3" Width="130" Content="{x:Static rs:Language.LibraryText}" Click="LibraryOpen"></Button>
             <Button Margin="3" Width="130" VerticalAlignment="Bottom" Content="{x:Static rs:Language.BackText}" Click="Button_Click"></Button>
         </StackPanel>
-        <Frame NavigationUIVisibility="Hidden" Name="mainFrame" Grid.Row="1" Source="Frames/Shop.xaml"></Frame>
-       
+        <Frame NavigationUIVisibility="Hidden" Name="mainFrame" Grid.Row="1" Source="Frames/Shop.xaml" Navigated="mainFrame_Navigated"/>
+
     </Grid>
 </Window>

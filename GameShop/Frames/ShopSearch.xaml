@@ -5,10 +5,78 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GameShop.Frames"
       mc:Ignorable="d" 
+      xmlns:rs="clr-namespace:GameShop.Languages"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ShopSearch">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="auto" MinWidth="122"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" MinHeight="33.96"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,0,2">
+            <Label Margin="3" Content="Цена от:"/>
+            <TextBox Name="CostBox1" Width="100" Height="20"></TextBox>
+
+            <Label Margin="3" Content="Цена до:"/>
+            <TextBox Name="CostBox2" Width="100" Height="20"></TextBox>
+          
+
+
+
+        </StackPanel>
+        <StackPanel  Grid.RowSpan="2" Grid.Column="1" Margin="3,3,3,3">
+            <Label Margin="3" Content="Жанры:"></Label>
+            <ListBox>
+                <ListBoxItem>
+                    <CheckBox Name="CheckBox1" Margin="3,6" Content="Гонки"></CheckBox>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Name="CheckBox2" Margin="3,6" Content="RPG"></CheckBox>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Name="CheckBox3" Margin="3,6" Content="Боевик"></CheckBox>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Name="CheckBox4" Margin="3,6" Content="Головоломка"></CheckBox>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Name="CheckBox5" Margin="3,6" Content="ААА"></CheckBox>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Name="CheckBox6" Margin="3,6" Content="Инди"></CheckBox>
+                </ListBoxItem>
+            </ListBox>
+        </StackPanel>
+        <ListBox Grid.Row="1"  Name="shopList1" Margin="3,3,3,3" SelectionChanged="shopList1_SelectionChanged" >
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+
+                    <StackPanel   Width="100"  Height="200" >
+                        <Image HorizontalAlignment="Center" Height="120" Margin="3" Source="{Binding path1}"/>
+                        <TextBlock HorizontalAlignment="Center" Margin="3" TextWrapping="Wrap" Text="{Binding Name}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Margin="3" Content="{x:Static rs:Language.costText1}"/>
+                            <Label Margin="3" Content="{Binding Cost, StringFormat={} r.}"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
+
+
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+
+        </ListBox>
     </Grid>
 </Page>

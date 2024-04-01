@@ -76,6 +76,13 @@ namespace GameShop
             Library library = new Library();
             mainFrame.Navigate(library);
         }
+
+
+
+        private void mainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+          
+        }
     }
     }
 
