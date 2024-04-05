@@ -43,26 +43,7 @@
                     </Grid>
                     <TextBlock TextWrapping="Wrap" Margin="3" HorizontalAlignment="Left" Name="DescriptionText" ></TextBlock>
                     <TextBlock Margin="3" Name="DI"></TextBlock>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-                        <StackPanel>
-                            <TextBlock>Минимальные требования</TextBlock>
-                            <TextBlock Margin="3" Name="CP1Text"></TextBlock>
-                            <TextBlock Margin="3" Name="OP1Text"></TextBlock>
-                            <TextBlock Margin="3" Name="GPD1Text"></TextBlock>
-                            <TextBlock Margin="3" Name="D1Text"></TextBlock>
-                        </StackPanel>
-                        <StackPanel Grid.Column="1">
-                            <TextBlock>Рекомендуемые требования</TextBlock>
-                            <TextBlock Margin="3" Name="CP2Text"></TextBlock>
-                            <TextBlock Margin="3" Name="OP2Text"></TextBlock>
-                            <TextBlock Margin="3" Name="GPD2Text"></TextBlock>
-                            <TextBlock Margin="3" Name="D2Text"></TextBlock>
-                        </StackPanel>
-                    </Grid>
+                  
                   </StackPanel>
 
                 <Image Height="300" Name="ima"></Image>

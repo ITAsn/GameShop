@@ -53,14 +53,19 @@ namespace GameShop.Frames
             game.Id = 0;
             game.Name = "Tetris";
             game.Cost = "120";
+            game.Descrition = "Cool game for everyone!";
+            game.CP1 = "Intel Atom"; game.D1 = "100 MB"; game.OP1 = "50 MB"; game.GPD1 = "------";
+            game.CP2 = "Intel Atom"; game.D2 = "100 MB"; game.OP2 = "50 MB"; game.GPD2 = "------";
             game.path1 = (new BitmapImage(new Uri("/Frames/noImage.png", UriKind.Relative)));
             shopList1.Items.Add(game);
             Game game1 = new Game();
             game1.Id = 1;
             game1.Name = "Speed";
-          
-            game1.path1 =(new BitmapImage(new Uri("/Frames/noImage.png", UriKind.Relative)));
-            game1.Cost = "300" ;
+            game1.CP1 = "Intel Atom"; game1.D1 = "100 MB"; game1.OP1 = "50 MB"; game1.GPD1 = "------";
+            game1.CP2 = "Intel Atom"; game1.D2 = "100 MB"; game1.OP2 = "50 MB"; game1.GPD2 = "------";
+            game1.Descrition = "Good race for this time!";
+            game1.path1 = (new BitmapImage(new Uri("/Frames/noImage.png", UriKind.Relative)));
+            game1.Cost = "300";
             shopList1.Items.Add(game1);
         }
        

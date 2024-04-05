@@ -32,6 +32,16 @@ namespace GameShop.Frames
                 imageBox.Source = App.ByteToImage(game.path);
             }
            
+            D1Text.Text = "Объем диска: " + game.D1;
+            CP1Text.Text = "ЦП:" + game.CP1;
+            OP1Text.Text = "Оперативная память: " + game.OP1;
+            GPD1Text.Text = "Видеокарта: " + game.GPD1;
+            D2Text.Text = "Объем диска: " + game.D2;
+            CP2Text.Text = "ЦП:" + game.CP2;
+            OP2Text.Text = "Оперативная память: " + game.OP2;
+            GPD2Text.Text = "Видеокарта: " + game.GPD2;
+            DI.Text = "Издатель: " + game.Publisher + "\nРазработчик: " + game.Developer;
+
         }
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)

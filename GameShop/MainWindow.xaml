@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GameShop"
         mc:Ignorable="d"
         xmlns:rs="clr-namespace:GameShop.Languages"
-        Title="{x:Static rs:Language.ShopText}" Height="450" Width="800" Closing="Window_Closing">
+        Title="{x:Static rs:Language.ShopText}" Height="450" Width="800" MinHeight="450" MinWidth="800" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
