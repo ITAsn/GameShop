@@ -27,6 +27,20 @@ namespace GameShop.Frames
         public string Name { get; set; }
         public string Cost { get; set; }
 
+        public string Descrition { get; set; }
+
+        public string Developer { get; set; }
+
+        public string Publisher { get; set; }
+        public string CP1 { get; set; }
+        public string OP1 { get; set; }
+        public string GPD1 { get; set; }
+        public string D1 { get; set; }
+
+        public string CP2 { get; set; }
+        public string OP2 { get; set; }
+        public string GPD2 { get; set; }
+        public string D2 { get; set; }
 
 
     }
