@@ -41,7 +41,7 @@ namespace GameShop.Frames
             FtpDownUpl ftp = new FtpDownUpl();
 
 
-            ftp.Download("127.0.0.1:21", "/", selectedGame.Path, "C://", "Pro", "123456");
+            ftp.Download(App.adress, "/", selectedGame.Path, App.PCPath, "Pro", "123456");
 
         }
     }

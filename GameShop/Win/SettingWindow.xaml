@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameShop.Win"
         mc:Ignorable="d"
+        xmlns:rs="clr-namespace:GameShop.Languages"
         Title="Settings" Height="450" Width="800">
     <Grid>
-        <TextBlock>Nothing here right now!</TextBlock>
+        <StackPanel>
+            <TextBlock Margin="5" Text="{x:Static rs:Language.SettingText}"></TextBlock>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <TextBlock Text="{x:Static rs:Language.IPText}" Margin="5"></TextBlock>
+                <TextBox Margin="5" Name="ipText" Width="150" IsEnabled="{Binding IsChecked, ElementName=check1}">127.0.0.1:21</TextBox>
+                <CheckBox Margin="5" Content="{x:Static rs:Language.FTPSerQuestText}" x:Name="check1"></CheckBox>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <TextBlock Text="{x:Static rs:Language.GPText}" Margin="5"></TextBlock>
+                <TextBox Margin="5" Name="gamePathText" Width="150">C:\Program Files</TextBox>
+                <Button Content="{x:Static rs:Language.ChooseText}" Margin="5" Click="Button_Click_1"></Button>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static rs:Language.LanguageText}"></TextBlock>
+                <Button Height="20" Margin="3" Click="Ru_Click">Ru</Button>
+                <Button Height="20" Margin="3" Click="En_Click">En</Button>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Button Margin="5" Content="{x:Static rs:Language.SaveText}" Click="Button_Click"></Button>
+                <Button Margin="5" Content="{x:Static rs:Language.CancelText}" Click="Button_Click_2"></Button>
+                <Button Margin="5" Content="{x:Static rs:Language.LogOutText}" Click="Button_Click_3" ></Button>
+            </StackPanel>
+        </StackPanel>
+
     </Grid>
 </Window>

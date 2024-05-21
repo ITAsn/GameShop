@@ -144,8 +144,14 @@
   <data name="BuyGameText1" xml:space="preserve">
     <value>Buy</value>
   </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="CantBackText" xml:space="preserve">
     <value>You cant go back!</value>
+  </data>
+  <data name="ChooseText" xml:space="preserve">
+    <value>Choose</value>
   </data>
   <data name="CloseText" xml:space="preserve">
     <value>Close</value>
@@ -177,20 +183,35 @@
   <data name="ExitText" xml:space="preserve">
     <value>Do you really want to get out?</value>
   </data>
+  <data name="FTPSerQuestText" xml:space="preserve">
+    <value>Is the ftp server not local?</value>
+  </data>
   <data name="GeneralText" xml:space="preserve">
     <value>General</value>
   </data>
   <data name="GenresText" xml:space="preserve">
     <value>Genres:</value>
   </data>
+  <data name="GPText" xml:space="preserve">
+    <value>Games path:</value>
+  </data>
   <data name="IndieText" xml:space="preserve">
     <value>Indie</value>
+  </data>
+  <data name="IPText" xml:space="preserve">
+    <value>Ip address of ftp server:</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>Language</value>
   </data>
   <data name="LibraryText" xml:space="preserve">
     <value>Library</value>
   </data>
   <data name="LoginText" xml:space="preserve">
     <value>Login</value>
+  </data>
+  <data name="LogOutText" xml:space="preserve">
+    <value>Log out</value>
   </data>
   <data name="LogPasNotExist" xml:space="preserve">
     <value>You have not entered your username and password</value>
@@ -218,6 +239,9 @@
   </data>
   <data name="RPGText" xml:space="preserve">
     <value>RPG</value>
+  </data>
+  <data name="SaveText" xml:space="preserve">
+    <value>Save</value>
   </data>
   <data name="SearchText" xml:space="preserve">
     <value>Search</value>

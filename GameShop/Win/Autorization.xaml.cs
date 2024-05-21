@@ -23,6 +23,7 @@ namespace GameShop.Win
         public Autorization()
         {
             InitializeComponent();
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-EN");
         }
         bool LanCha=false;
 

@@ -28,8 +28,9 @@ namespace GameShop
             return (ImageSource)bitmap;
         }
         public static Users user;
-        public static String adress;//IP FTP server
-        public static String PCPath;//Way for games
+        public static String adress= "127.0.0.1:21";//IP FTP server
+        public static String PCPath = "C:\\Program Files";//Way for games
+        public static MainWindow main;
         App()
         {
 

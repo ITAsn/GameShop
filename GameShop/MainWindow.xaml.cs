@@ -21,16 +21,23 @@ namespace GameShop
     /// </summary>
     public partial class MainWindow : Window
     {
+        int lan = 1;
         public MainWindow()
         {
             InitializeComponent();
+            
             App.frame = mainFrame;
+            App.main = this;
         }
 
         private void SettingOpen(object sender, RoutedEventArgs e)
         {
+            sett();
+        }
+       public void sett()
+        {
             Win.SettingWindow settingWindow = new Win.SettingWindow();
-            settingWindow.ShowDialog();
+            settingWindow.Show();
         }
 
         private void AboutUs(object sender, RoutedEventArgs e)
@@ -49,14 +56,22 @@ namespace GameShop
             Shop shop = new Shop();
             mainFrame.Navigate(shop);
         }
+        public bool Canc=false;
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            
+            if (!Canc)
+            {
                 MessageBoxResult res = MessageBox.Show(Languages.Language.ResourceManager.GetString("ExitText"), Languages.Language.ResourceManager.GetString("QuestionText"), MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (res == MessageBoxResult.No)
                 {
                     e.Cancel = true;
                 }
+            }
+            else
+            {
+                e.Cancel=false;
+            }
+              
             }
 
         private void Button_Click(object sender, RoutedEventArgs e)

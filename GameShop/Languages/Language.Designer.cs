@@ -142,11 +142,29 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Cancel.
+        /// </summary>
+        public static string CancelText {
+            get {
+                return ResourceManager.GetString("CancelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на You cant go back!.
         /// </summary>
         public static string CantBackText {
             get {
                 return ResourceManager.GetString("CantBackText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Choose.
+        /// </summary>
+        public static string ChooseText {
+            get {
+                return ResourceManager.GetString("ChooseText", resourceCulture);
             }
         }
         
@@ -241,6 +259,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Is the ftp server not local?.
+        /// </summary>
+        public static string FTPSerQuestText {
+            get {
+                return ResourceManager.GetString("FTPSerQuestText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на General.
         /// </summary>
         public static string GeneralText {
@@ -259,11 +286,38 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Games path:.
+        /// </summary>
+        public static string GPText {
+            get {
+                return ResourceManager.GetString("GPText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Indie.
         /// </summary>
         public static string IndieText {
             get {
                 return ResourceManager.GetString("IndieText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ip address of ftp server:.
+        /// </summary>
+        public static string IPText {
+            get {
+                return ResourceManager.GetString("IPText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Language.
+        /// </summary>
+        public static string LanguageText {
+            get {
+                return ResourceManager.GetString("LanguageText", resourceCulture);
             }
         }
         
@@ -282,6 +336,15 @@ namespace GameShop.Languages {
         public static string LoginText {
             get {
                 return ResourceManager.GetString("LoginText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Log out.
+        /// </summary>
+        public static string LogOutText {
+            get {
+                return ResourceManager.GetString("LogOutText", resourceCulture);
             }
         }
         
@@ -363,6 +426,15 @@ namespace GameShop.Languages {
         public static string RPGText {
             get {
                 return ResourceManager.GetString("RPGText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Save.
+        /// </summary>
+        public static string SaveText {
+            get {
+                return ResourceManager.GetString("SaveText", resourceCulture);
             }
         }
         
