@@ -19,6 +19,7 @@ namespace GameShop.Win
     /// </summary>
     public partial class Registation : Window
     {
+        GameShopDBEntities entities = new GameShopDBEntities();
         public Registation()
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace GameShop.Win
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.DialogResult = false;
         }
 
         private void RegistrationClick(object sender, RoutedEventArgs e)
@@ -56,6 +57,52 @@ namespace GameShop.Win
             {
                 try
                 {
+                    if(!string.IsNullOrEmpty(loginText.Text)&& !string.IsNullOrEmpty(UsernNameText.Text) &&
+                        !string.IsNullOrEmpty(passwordText.Password) && !string.IsNullOrEmpty(passwordText1.Password))
+                    {
+
+                        List<Users> u = entities.Users.Where(c => c.Login == loginText.Text).ToList();
+                        if (u.Count == 0)
+                        {
+                            if (passwordText.Password == passwordText1.Password)
+                            {
+
+                           
+                             Users users = new Users();
+                            Random rnd = new Random();
+                            int id1;
+                            Users users1;
+                            do
+                            {
+                                users1 = null;
+                                id1 = rnd.Next(10000000);
+                                users1 = entities.Users.Find(id1);
+                            } while (users1 != null);
+                            users.ID = id1;
+                            users.Login = loginText.Text;
+                            users.UserName = UsernNameText.Text;
+                            users.Passw = passwordText1.Password;
+                                entities.Users.Add(users);
+                                entities.Logs.Add(new Logs
+                                {
+                                    dateTime = DateTime.Now,
+                                    LogText = $"{users.Login} was created",
+
+                                });
+
+                                entities.SaveChanges();
+                                this.DialogResult = true;
+
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("");
+                        }
+                       
+                        
+                    }
+                 
 
                 }
                 catch (Exception ex)

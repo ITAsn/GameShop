@@ -195,6 +195,9 @@
   <data name="LogPasNotExist" xml:space="preserve">
     <value>You have not entered your username and password</value>
   </data>
+  <data name="PasswordOrUserNameErrorText" xml:space="preserve">
+    <value>Password or username are not correct</value>
+  </data>
   <data name="PasswordText" xml:space="preserve">
     <value>Password</value>
   </data>
@@ -224,5 +227,8 @@
   </data>
   <data name="ShopText" xml:space="preserve">
     <value>Shop</value>
+  </data>
+  <data name="UserNameText" xml:space="preserve">
+    <value>User name</value>
   </data>
 </root>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,33 +21,28 @@ namespace GameShop.Frames
     /// </summary>
     public partial class Library : Page
     {
+        Games selectedGame;
         public Library()
         {
             InitializeComponent();
         
-            Game game = new Game();
-            game.Id = 0;
-            game.Name = "Tetris";
-            game.Cost = "120";
-            game.Descrition = "Cool game for everyone!";
-            game.CP1 = "Intel Atom"; game.D1 = "100 MB"; game.OP1 = "50 MB"; game.GPD1 = "------";
-            game.CP2 = "Intel Atom"; game.D2 = "100 MB"; game.OP2 = "50 MB"; game.GPD2 = "------";
-            game.path1 = (new BitmapImage(new Uri("/Frames/noImage.png", UriKind.Relative)));
-            listBox.Items.Add(game);
-            Game game1 = new Game();
-            game1.Id = 1;
-            game1.Name = "Speed";
-            game1.CP1 = "Intel Atom"; game1.D1 = "100 MB"; game1.OP1 = "50 MB"; game1.GPD1 = "------";
-            game1.CP2 = "Intel Atom"; game1.D2 = "100 MB"; game1.OP2 = "50 MB"; game1.GPD2 = "------";
-            game1.Descrition = "Good race for this time!";
-            game1.path1 = (new BitmapImage(new Uri("/Frames/noImage.png", UriKind.Relative)));
-            game1.Cost = "300";
-            listBox.Items.Add(game1);
+          
         }
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            selectedGame = listBox.SelectedItem as Games;
+            gameName.Text = selectedGame.Name; 
+            DI.Text = "Издатель: " + selectedGame.Publisher + "\nРазработчик: " + selectedGame.Developer;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FtpDownUpl ftp = new FtpDownUpl();
+
+
+            ftp.Download("127.0.0.1:21", "/", selectedGame.Path, "C://", "Pro", "123456");
+
         }
     }
 }

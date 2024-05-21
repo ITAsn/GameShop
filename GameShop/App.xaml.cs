@@ -27,6 +27,9 @@ namespace GameShop
 
             return (ImageSource)bitmap;
         }
+        public static Users user;
+        public static String adress;//IP FTP server
+        public static String PCPath;//Way for games
         App()
         {
 

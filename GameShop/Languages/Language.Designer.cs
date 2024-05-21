@@ -295,6 +295,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Password or username are not correct.
+        /// </summary>
+        public static string PasswordOrUserNameErrorText {
+            get {
+                return ResourceManager.GetString("PasswordOrUserNameErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Password.
         /// </summary>
         public static string PasswordText {
@@ -381,6 +390,15 @@ namespace GameShop.Languages {
         public static string ShopText {
             get {
                 return ResourceManager.GetString("ShopText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на User name.
+        /// </summary>
+        public static string UserNameText {
+            get {
+                return ResourceManager.GetString("UserNameText", resourceCulture);
             }
         }
     }

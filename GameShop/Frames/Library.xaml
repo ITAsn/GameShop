@@ -28,7 +28,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="gameName"></TextBlock>
-                        <Button  Grid.Column="1"  Margin="5" HorizontalAlignment="Right" Width="50" Height="50"  >
+                        <Button  Grid.Column="1"  Margin="5" HorizontalAlignment="Right" Width="50" Height="50" Click="Button_Click"  >
                             <Button.Template>
                                 <ControlTemplate  TargetType="Button">
                                     <Grid>

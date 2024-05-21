@@ -20,35 +20,36 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,0,2">
             <Label Margin="3" Content="{x:Static rs:Language.CostText2}"/>
-            <TextBox Name="CostBox1" Width="100" Height="20"></TextBox>
+            <TextBox PreviewTextInput="NumberValidationTextBox" TextChanged="CostBox1_TextChanged" Name="CostBox1" Width="100" Height="20"></TextBox>
 
             <Label Margin="3" Content="{x:Static rs:Language.CostText3}"/>
-            <TextBox Name="CostBox2" Width="100" Height="20"></TextBox>
-          
+            <TextBox  PreviewTextInput="NumberValidationTextBox" TextChanged="CostBox2_TextChanged" Name="CostBox2" Width="100" Height="20"></TextBox>
 
+            <Label Margin="3">Search</Label>
+            <TextBox Width="150" Height="20" Name="searchText1" TextChanged="searchText1_TextChanged"></TextBox>
 
 
         </StackPanel>
         <StackPanel  Grid.RowSpan="2" Grid.Column="1" Margin="3,3,3,3">
-            <Label Margin="3" Content="{x:Static rs:Language.GenresText}"></Label>
-            <ListBox>
+            <Label Margin="3,35" Content="{x:Static rs:Language.GenresText}"></Label>
+            <ListBox >
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox1" Margin="3,6" Content="{x:Static rs:Language.RaceText}"></CheckBox>
+                    <CheckBox Click="CheckBox1_Click" Name="CheckBox1" Margin="3,6" Content="{x:Static rs:Language.RaceText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox2" Margin="3,6" Content="{x:Static rs:Language.RPGText}"></CheckBox>
+                    <CheckBox Click="CheckBox1_Click" Name="CheckBox2" Margin="3,6" Content="{x:Static rs:Language.RPGText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox3" Margin="3,6" Content="{x:Static rs:Language.ActionText}"></CheckBox>
+                    <CheckBox Click="CheckBox1_Click" Name="CheckBox3" Margin="3,6" Content="{x:Static rs:Language.ActionText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox4" Margin="3,6" Content="{x:Static rs:Language.PuzzleText}"></CheckBox>
+                    <CheckBox Click="CheckBox1_Click" Name="CheckBox4" Margin="3,6" Content="{x:Static rs:Language.PuzzleText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox5" Margin="3,6" Content="{x:Static rs:Language.AAAText}"></CheckBox>
+                    <CheckBox Click="CheckBox1_Click" Name="CheckBox5" Margin="3,6" Content="{x:Static rs:Language.AAAText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
-                    <CheckBox Name="CheckBox6" Margin="3,6" Content="Инди"></CheckBox>
+                    <CheckBox Click="CheckBox1_Click" Name="CheckBox6" Margin="3,6" Content="Инди"></CheckBox>
                 </ListBoxItem>
             </ListBox>
         </StackPanel>
@@ -57,9 +58,9 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
 
-                    <StackPanel   Width="100"  Height="200" >
-                        <Image HorizontalAlignment="Center" Height="120" Margin="3" Source="{Binding path1}"/>
-                        <TextBlock HorizontalAlignment="Center" Margin="3" TextWrapping="Wrap" Text="{Binding Name}"/>
+                    <StackPanel     Height="200" >
+                        <Image  Height="120" Margin="3" Source="{Binding Path}"/>
+                        <TextBlock  Margin="3" TextWrapping="Wrap" Text="{Binding Name}"/>
                         <StackPanel Orientation="Horizontal">
                             <Label Margin="3" Content="{x:Static rs:Language.costText1}"/>
                             <Label Margin="3" Content="{Binding Cost, StringFormat={} r.}"/>

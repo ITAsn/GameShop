@@ -20,33 +20,40 @@ namespace GameShop.Frames
     /// </summary>
     public partial class ShopAbout : Page
     {
-        Game game;
-        public ShopAbout(Game game)
+        GameShopDBEntities entities = new GameShopDBEntities();
+        Games gamePage;
+        public ShopAbout(Games game)
         {
             InitializeComponent();
-            this.game = game;
+            gamePage = game;
             nameText.Text = game.Name;
-            costText.Text = game.Cost + " руб.";
-            if (game.path != null)
-            {
-                imageBox.Source = App.ByteToImage(game.path);
-            }
-           
-            D1Text.Text = "Объем диска: " + game.D1;
-            CP1Text.Text = "ЦП:" + game.CP1;
-            OP1Text.Text = "Оперативная память: " + game.OP1;
-            GPD1Text.Text = "Видеокарта: " + game.GPD1;
-            D2Text.Text = "Объем диска: " + game.D2;
-            CP2Text.Text = "ЦП:" + game.CP2;
-            OP2Text.Text = "Оперативная память: " + game.OP2;
-            GPD2Text.Text = "Видеокарта: " + game.GPD2;
-            DI.Text = "Издатель: " + game.Publisher + "\nРазработчик: " + game.Developer;
+            costText.Text = game.Cost.ToString() ;
+            descriptionText.Text = game.Description;
+            CP1Text.Text = game.CP1;
+            OP1Text.Text = game.OP1;
+            GPD1Text.Text = game.GPD1;
+            D1Text.Text = game.D1;
+
+            CP2Text.Text = game.CP2;
+            OP2Text.Text = game.OP2;
+            GPD2Text.Text = game.GDP2;
+            D2Text.Text = game.D2;
 
         }
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Logs logs = entities.Logs.ToList().Last();
+            entities.Logs.Add(new Logs
+            {
+                IdLog = logs.IdLog+1,
+                LogText = $"{App.user.Login} bought {gamePage.ID}",
+                dateTime = DateTime.Now
+            }) ;
+            Users user=entities.Users.Find(App.user.ID);
+            user.Games += gamePage.ID + ";";
+            entities.SaveChanges();
+            MessageBox.Show("You bought this game!!!");
         }
     }
 }

@@ -19,6 +19,7 @@ namespace GameShop.Win
     /// </summary>
     public partial class Autorization : Window
     {
+        GameShopDBEntities bd = new GameShopDBEntities();
         public Autorization()
         {
             InitializeComponent();
@@ -57,12 +58,30 @@ namespace GameShop.Win
         {
             if (!string.IsNullOrEmpty(loginText.Text) && !string.IsNullOrEmpty(passwordText.Password))
             {
+             
                 try
                 {
-                    MainWindow mainWindow = new MainWindow();
-                    mainWindow.Show();
-                    LanCha = true;
-                    Close();
+                   List<Users> users = bd.Users.Where(c => c.Login == loginText.Text).ToList();
+                    if (users != null)
+                    {
+                        if (users[0].Passw == passwordText.Password)
+                        {
+                            MainWindow mainWindow = new MainWindow();
+                            mainWindow.Show();
+                            LanCha = true;
+                            App.user = users[0];
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show(Properties.Resources.ResourceManager.GetString("PasswordOrUserNameErrorText"), Properties.Resources.ResourceManager.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(Properties.Resources.ResourceManager.GetString("PasswordOrUserNameErrorText"), Properties.Resources.ResourceManager.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                
                    
                 }catch(Exception ex)
                 {
