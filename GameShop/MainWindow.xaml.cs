@@ -1,4 +1,5 @@
 ﻿using GameShop.Frames;
+using GameShop.Win;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace GameShop
             
             App.frame = mainFrame;
             App.main = this;
+            UserName.Header = App.user.UserName;// Properties.Resources.ResourceManager.GetString("PublisherText");
         }
 
         private void SettingOpen(object sender, RoutedEventArgs e)
@@ -99,6 +101,13 @@ namespace GameShop
         private void mainFrame_Navigated(object sender, NavigationEventArgs e)
         {
           
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            GameAdd ga = new GameAdd();
+            ga.ShowDialog();
+
         }
     }
     }

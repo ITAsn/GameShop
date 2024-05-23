@@ -67,10 +67,14 @@ namespace GameShop.Win
                     {
                         if (users[0].Passw == passwordText.Password)
                         {
+
+                            App.user = users[0];
+                            App.user.Games = App.user.Games.Trim();
+                            bd.SaveChanges();
                             MainWindow mainWindow = new MainWindow();
                             mainWindow.Show();
                             LanCha = true;
-                            App.user = users[0];
+                           
                             Close();
                         }
                         else

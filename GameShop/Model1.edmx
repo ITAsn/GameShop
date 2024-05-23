@@ -31,6 +31,7 @@
           <Property Name="OP2" Type="nvarchar" MaxLength="50" />
           <Property Name="GDP2" Type="nvarchar" MaxLength="50" />
           <Property Name="D2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Logs">
           <Key>
@@ -139,6 +140,7 @@
           <Property Name="OP2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GDP2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="D2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="Developers" Relationship="Self.FK_Games_Developers" FromRole="Games" ToRole="Developers" />
           <NavigationProperty Name="Publishers" Relationship="Self.FK_Games_Publishers" FromRole="Games" ToRole="Publishers" />
         </EntityType>
@@ -202,7 +204,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="GameShopDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="GameShopDBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Developers" EntityType="Self.Developers" />
           <EntitySet Name="Games" EntityType="Self.Games" />
           <EntitySet Name="Logs" EntityType="Self.Logs" />
@@ -223,7 +225,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище GameShopDBModelContainer" CdmEntityContainer="GameShopDBEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище GameShopDBModelContainer" CdmEntityContainer="GameShopDBEntities1">
           <EntitySetMapping Name="Developers">
             <EntityTypeMapping TypeName="GameShopDBModel.Developers">
               <MappingFragment StoreEntitySet="Developers">
@@ -250,6 +252,7 @@
                 <ScalarProperty Name="OP2" ColumnName="OP2" />
                 <ScalarProperty Name="GDP2" ColumnName="GDP2" />
                 <ScalarProperty Name="D2" ColumnName="D2" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Pipes;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace GameShop
 {
@@ -73,6 +75,8 @@ namespace GameShop
                 {
                     outputStream.Write(buffer, 0, readCount);
                     readCount = responseStream.Read(buffer, 0, bufferSize);
+                    int position = (int)outputStream.Position;
+                   
                 }
                 string statusDescription = response.StatusDescription;
                 responseStream.Close();

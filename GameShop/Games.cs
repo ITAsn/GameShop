@@ -29,6 +29,7 @@ namespace GameShop
         public string OP2 { get; set; }
         public string GDP2 { get; set; }
         public string D2 { get; set; }
+        public byte[] Image { get; set; }
     
         public virtual Developers Developers { get; set; }
         public virtual Publishers Publishers { get; set; }

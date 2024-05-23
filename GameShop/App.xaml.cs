@@ -33,7 +33,7 @@ namespace GameShop
         public static MainWindow main;
         App()
         {
-
+          
         }
       
     }

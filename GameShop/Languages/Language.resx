@@ -132,11 +132,20 @@
   <data name="ActionText" xml:space="preserve">
     <value>Action</value>
   </data>
+  <data name="AddGameText" xml:space="preserve">
+    <value>Add a game(admin)</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Add</value>
+  </data>
   <data name="AutorizationText" xml:space="preserve">
     <value>Autorization</value>
   </data>
   <data name="BackText" xml:space="preserve">
     <value>Back</value>
+  </data>
+  <data name="BoughtGameText" xml:space="preserve">
+    <value>You bought this game!!!</value>
   </data>
   <data name="BuyGameText" xml:space="preserve">
     <value>Buy a game</value>
@@ -149,6 +158,9 @@
   </data>
   <data name="CantBackText" xml:space="preserve">
     <value>You cant go back!</value>
+  </data>
+  <data name="ChooseImageText" xml:space="preserve">
+    <value>Select an image</value>
   </data>
   <data name="ChooseText" xml:space="preserve">
     <value>Choose</value>
@@ -170,6 +182,12 @@
   </data>
   <data name="descriptionText1" xml:space="preserve">
     <value>Description: </value>
+  </data>
+  <data name="DeveloperText" xml:space="preserve">
+    <value>Developer: </value>
+  </data>
+  <data name="DownloadText" xml:space="preserve">
+    <value>Download</value>
   </data>
   <data name="EnterButton" xml:space="preserve">
     <value>Enter</value>
@@ -216,6 +234,9 @@
   <data name="LogPasNotExist" xml:space="preserve">
     <value>You have not entered your username and password</value>
   </data>
+  <data name="MinimumText" xml:space="preserve">
+    <value>minimum requirements: </value>
+  </data>
   <data name="PasswordOrUserNameErrorText" xml:space="preserve">
     <value>Password or username are not correct</value>
   </data>
@@ -225,6 +246,9 @@
   <data name="PopularText" xml:space="preserve">
     <value>Popular Games:</value>
   </data>
+  <data name="PublisherText" xml:space="preserve">
+    <value>Publisher: </value>
+  </data>
   <data name="PuzzleText" xml:space="preserve">
     <value>Puzzle</value>
   </data>
@@ -233,6 +257,9 @@
   </data>
   <data name="RaceText" xml:space="preserve">
     <value>Race</value>
+  </data>
+  <data name="RecomandText" xml:space="preserve">
+    <value>Recommended requirements</value>
   </data>
   <data name="RegistrationText" xml:space="preserve">
     <value>Registration</value>
@@ -254,5 +281,8 @@
   </data>
   <data name="UserNameText" xml:space="preserve">
     <value>User name</value>
+  </data>
+  <data name="WrongLoginText" xml:space="preserve">
+    <value>The login already exists</value>
   </data>
 </root>

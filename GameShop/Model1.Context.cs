@@ -16,7 +16,7 @@ namespace GameShop
     public partial class GameShopDBEntities : DbContext
     {
         public GameShopDBEntities()
-            : base("name=GameShopDBEntities")
+            : base("name=GameShopDBEntities1")
         {
         }
     

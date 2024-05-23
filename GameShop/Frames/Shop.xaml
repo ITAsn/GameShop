@@ -25,7 +25,7 @@
                     <DataTemplate>
                        
                             <StackPanel   Width="100" MouseDown="Border_MouseDown" Height="200" >
-                                <Image HorizontalAlignment="Center" Height="120" Margin="3" Source="{Binding path1}"/>
+                                <Image HorizontalAlignment="Center" Height="120" Margin="3" Source="{Binding Image}"/>
                                 <TextBlock HorizontalAlignment="Center" Margin="3" TextWrapping="Wrap" Text="{Binding Name}"/>
                             <StackPanel Orientation="Horizontal">
                                 <Label Margin="3" Content="{x:Static rs:Language.costText1}"/>

@@ -26,7 +26,7 @@ namespace GameShop.Frames
         public ShopSearch()
         {
             InitializeComponent();
-            shopList1.ItemsSource = entities.Games;
+            shopList1.ItemsSource = entities.Games.ToList() ;
             games = entities.Games.ToList();
         }
         private void shopList1_SelectionChanged(object sender, SelectionChangedEventArgs e)

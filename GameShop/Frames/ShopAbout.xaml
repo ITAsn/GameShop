@@ -48,14 +48,14 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <StackPanel>
-                        <TextBlock>Минимальные требования</TextBlock>
+                        <TextBlock Text="{x:Static rs:Language.MinimumText}"></TextBlock>
                         <TextBlock Margin="3" Name="CP1Text"></TextBlock>
                         <TextBlock Margin="3" Name="OP1Text"></TextBlock>
                         <TextBlock Margin="3" Name="GPD1Text"></TextBlock>
                         <TextBlock Margin="3" Name="D1Text"></TextBlock>
                     </StackPanel>
                     <StackPanel Grid.Column="1">
-                        <TextBlock>Рекомендуемые требования</TextBlock>
+                        <TextBlock Text="{x:Static rs:Language.RecomandText}"></TextBlock>
                         <TextBlock Margin="3" Name="CP2Text"></TextBlock>
                         <TextBlock Margin="3" Name="OP2Text"></TextBlock>
                         <TextBlock Margin="3" Name="GPD2Text"></TextBlock>

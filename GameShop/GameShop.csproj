@@ -80,6 +80,11 @@
     <Compile Include="Games.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="GameShopDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameShopDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Languages\Language.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +122,9 @@
     </Compile>
     <Compile Include="Win\Autorization.xaml.cs">
       <DependentUpon>Autorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Win\GameAdd.xaml.cs">
+      <DependentUpon>GameAdd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Win\Registation.xaml.cs">
       <DependentUpon>Registation.xaml</DependentUpon>
@@ -180,6 +188,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Win\GameAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Win\Registation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -211,6 +223,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="GameShopDBDataSet.xsc">
+      <DependentUpon>GameShopDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GameShopDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GameShopDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GameShopDBDataSet.xss">
+      <DependentUpon>GameShopDBDataSet.xsd</DependentUpon>
+    </None>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>

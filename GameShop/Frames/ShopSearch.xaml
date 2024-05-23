@@ -25,7 +25,7 @@
             <Label Margin="3" Content="{x:Static rs:Language.CostText3}"/>
             <TextBox  PreviewTextInput="NumberValidationTextBox" TextChanged="CostBox2_TextChanged" Name="CostBox2" Width="100" Height="20"></TextBox>
 
-            <Label Margin="3">Search</Label>
+            <Label Margin="3" Content="{x:Static rs:Language.SearchText}"></Label>
             <TextBox Width="150" Height="20" Name="searchText1" TextChanged="searchText1_TextChanged"></TextBox>
 
 
@@ -49,7 +49,7 @@
                     <CheckBox Click="CheckBox1_Click" Name="CheckBox5" Margin="3,6" Content="{x:Static rs:Language.AAAText}"></CheckBox>
                 </ListBoxItem>
                 <ListBoxItem>
-                    <CheckBox Click="CheckBox1_Click" Name="CheckBox6" Margin="3,6" Content="Инди"></CheckBox>
+                    <CheckBox Click="CheckBox1_Click" Name="CheckBox6" Margin="3,6" Content="{x:Static rs:Language.IndieText}"></CheckBox>
                 </ListBoxItem>
             </ListBox>
         </StackPanel>

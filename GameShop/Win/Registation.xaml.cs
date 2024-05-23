@@ -97,7 +97,7 @@ namespace GameShop.Win
                         }
                         else
                         {
-                            MessageBox.Show("");
+                            MessageBox.Show(Properties.Resources.ResourceManager.GetString("WrongLoginText"));
                         }
                        
                         

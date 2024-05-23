@@ -106,6 +106,24 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Add a game(admin).
+        /// </summary>
+        public static string AddGameText {
+            get {
+                return ResourceManager.GetString("AddGameText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Add.
+        /// </summary>
+        public static string AddText {
+            get {
+                return ResourceManager.GetString("AddText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Autorization.
         /// </summary>
         public static string AutorizationText {
@@ -120,6 +138,15 @@ namespace GameShop.Languages {
         public static string BackText {
             get {
                 return ResourceManager.GetString("BackText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You bought this game!!!.
+        /// </summary>
+        public static string BoughtGameText {
+            get {
+                return ResourceManager.GetString("BoughtGameText", resourceCulture);
             }
         }
         
@@ -156,6 +183,15 @@ namespace GameShop.Languages {
         public static string CantBackText {
             get {
                 return ResourceManager.GetString("CantBackText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Select an image.
+        /// </summary>
+        public static string ChooseImageText {
+            get {
+                return ResourceManager.GetString("ChooseImageText", resourceCulture);
             }
         }
         
@@ -219,6 +255,24 @@ namespace GameShop.Languages {
         public static string descriptionText1 {
             get {
                 return ResourceManager.GetString("descriptionText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Developer: .
+        /// </summary>
+        public static string DeveloperText {
+            get {
+                return ResourceManager.GetString("DeveloperText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Download.
+        /// </summary>
+        public static string DownloadText {
+            get {
+                return ResourceManager.GetString("DownloadText", resourceCulture);
             }
         }
         
@@ -358,6 +412,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на minimum requirements: .
+        /// </summary>
+        public static string MinimumText {
+            get {
+                return ResourceManager.GetString("MinimumText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Password or username are not correct.
         /// </summary>
         public static string PasswordOrUserNameErrorText {
@@ -385,6 +448,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Publisher: .
+        /// </summary>
+        public static string PublisherText {
+            get {
+                return ResourceManager.GetString("PublisherText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Puzzle.
         /// </summary>
         public static string PuzzleText {
@@ -408,6 +480,15 @@ namespace GameShop.Languages {
         public static string RaceText {
             get {
                 return ResourceManager.GetString("RaceText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Recommended requirements.
+        /// </summary>
+        public static string RecomandText {
+            get {
+                return ResourceManager.GetString("RecomandText", resourceCulture);
             }
         }
         
@@ -471,6 +552,15 @@ namespace GameShop.Languages {
         public static string UserNameText {
             get {
                 return ResourceManager.GetString("UserNameText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The login already exists.
+        /// </summary>
+        public static string WrongLoginText {
+            get {
+                return ResourceManager.GetString("WrongLoginText", resourceCulture);
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace GameShop.Frames
 {
@@ -33,7 +35,12 @@ namespace GameShop.Frames
             OP1Text.Text = game.OP1;
             GPD1Text.Text = game.GPD1;
             D1Text.Text = game.D1;
-
+            MemoryStream byteStream = new MemoryStream(gamePage.Image);
+            BitmapImage image1 = new BitmapImage();
+            image1.BeginInit();
+            image1.StreamSource = byteStream;
+            image1.EndInit();
+            imageBox.Source = image1;
             CP2Text.Text = game.CP2;
             OP2Text.Text = game.OP2;
             GPD2Text.Text = game.GDP2;
@@ -53,7 +60,7 @@ namespace GameShop.Frames
             Users user=entities.Users.Find(App.user.ID);
             user.Games += gamePage.ID + ";";
             entities.SaveChanges();
-            MessageBox.Show("You bought this game!!!");
+            MessageBox.Show(Properties.Resources.ResourceManager.GetString("BoughtGameText"));
         }
     }
 }
