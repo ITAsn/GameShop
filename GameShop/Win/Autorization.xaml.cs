@@ -23,7 +23,7 @@ namespace GameShop.Win
         public Autorization()
         {
             InitializeComponent();
-            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-EN");
+          //  System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-EN");
         }
         bool LanCha=false;
 
@@ -79,18 +79,18 @@ namespace GameShop.Win
                         }
                         else
                         {
-                            MessageBox.Show(Properties.Resources.ResourceManager.GetString("PasswordOrUserNameErrorText"), Properties.Resources.ResourceManager.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBox.Show(Languages.Language.ResourceManager.GetString("PasswordOrUserNameErrorText"), Languages.Language.ResourceManager.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show(Properties.Resources.ResourceManager.GetString("PasswordOrUserNameErrorText"), Properties.Resources.ResourceManager.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show(Languages.Language.ResourceManager.GetString("PasswordOrUserNameErrorText"), Languages.Language.ResourceManager.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 
                    
                 }catch(Exception ex)
                 {
-                    MessageBox.Show(ex.Message,Properties.Resources.ResourceManager.GetString("ErrorText"),MessageBoxButton.OK ,MessageBoxImage.Error);
+                    MessageBox.Show(ex.Message, Languages.Language.ResourceManager.GetString("ErrorText"),MessageBoxButton.OK ,MessageBoxImage.Error);
                 }
             }
             else

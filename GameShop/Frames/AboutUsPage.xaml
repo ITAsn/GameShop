@@ -14,7 +14,7 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image Width="250"></Image>
+        <Image Width="250" Source="/Photos/logo.png"></Image>
         <TextBlock Grid.Column="1" TextWrapping="Wrap" FontSize="24" Text="{x:Static rs:Language.AboutUsText1}"></TextBlock>
     </Grid>
 </Page>

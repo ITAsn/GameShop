@@ -121,171 +121,171 @@
     <value>AAA</value>
   </data>
   <data name="AboutUsText" xml:space="preserve">
-    <value>About us</value>
+    <value>О нас</value>
   </data>
   <data name="AboutUsText1" xml:space="preserve">
-    <value>This project was implemented as a graduation project by a student. This project implements the work of an online game store. This program works through a database and FTP servers.</value>
+    <value>Этот проект был реализован студентом в качестве дипломного проекта. В этом проекте реализована работа онлайн-магазина игр. Эта программа работает через базу данных и FTP-серверы.</value>
   </data>
   <data name="AccountText" xml:space="preserve">
-    <value>Account</value>
+    <value>Аккаунт</value>
   </data>
   <data name="ActionText" xml:space="preserve">
     <value>Action</value>
   </data>
   <data name="AddGameText" xml:space="preserve">
-    <value>Add a game(admin)</value>
+    <value>Добавит игру(админ)</value>
   </data>
   <data name="AddText" xml:space="preserve">
-    <value>Add</value>
+    <value>Добавить</value>
   </data>
   <data name="AutorizationText" xml:space="preserve">
-    <value>Autorization</value>
+    <value>Авторизация</value>
   </data>
   <data name="BackText" xml:space="preserve">
-    <value>Back</value>
+    <value>Назад</value>
   </data>
   <data name="BoughtGameText" xml:space="preserve">
-    <value>You bought this game!!!</value>
+    <value>Вы купили игру!!</value>
   </data>
   <data name="BuyGameText" xml:space="preserve">
-    <value>Buy a game</value>
+    <value>Купить игру</value>
   </data>
   <data name="BuyGameText1" xml:space="preserve">
-    <value>Buy</value>
+    <value>Купить</value>
   </data>
   <data name="CancelText" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Отмена</value>
   </data>
   <data name="CantBackText" xml:space="preserve">
-    <value>You cant go back!</value>
+    <value>Назад дороги нет</value>
   </data>
   <data name="ChooseImageText" xml:space="preserve">
-    <value>Select an image</value>
+    <value>Выберите изображение</value>
   </data>
   <data name="ChooseText" xml:space="preserve">
-    <value>Choose</value>
+    <value>Выбрать</value>
   </data>
   <data name="CloseText" xml:space="preserve">
-    <value>Close</value>
+    <value>Закрыть</value>
   </data>
   <data name="ConfirmText" xml:space="preserve">
-    <value>Password confirmation</value>
+    <value>Поддтверждение пароля</value>
   </data>
   <data name="costText1" xml:space="preserve">
-    <value>Cost:</value>
+    <value>Цена:</value>
   </data>
   <data name="CostText2" xml:space="preserve">
-    <value>Price from:</value>
+    <value>Цена от: </value>
   </data>
   <data name="CostText3" xml:space="preserve">
-    <value>Price up to:</value>
+    <value>Цена до: </value>
   </data>
   <data name="descriptionText1" xml:space="preserve">
-    <value>Description: </value>
+    <value>Описание: </value>
   </data>
   <data name="DeveloperText" xml:space="preserve">
-    <value>Developer: </value>
+    <value>Разработчик: </value>
   </data>
   <data name="DownloadCText" xml:space="preserve">
-    <value>The program has been downloaded</value>
+    <value>Программа загружена!</value>
   </data>
   <data name="DownloadText" xml:space="preserve">
-    <value>Download</value>
+    <value>Загрузить</value>
   </data>
   <data name="EnterButton" xml:space="preserve">
-    <value>Enter</value>
+    <value>Войти</value>
   </data>
   <data name="ErrorText" xml:space="preserve">
-    <value>Error</value>
+    <value>Ошибка</value>
   </data>
   <data name="ExitExitText" xml:space="preserve">
-    <value>Exit</value>
+    <value>Выйти</value>
   </data>
   <data name="ExitText" xml:space="preserve">
-    <value>Do you really want to get out?</value>
+    <value>Вы действительно хотите выйти</value>
   </data>
   <data name="FTPSerQuestText" xml:space="preserve">
-    <value>Is the ftp server not local?</value>
+    <value>Ваш ftp Сервер не локальный?</value>
   </data>
   <data name="GeneralText" xml:space="preserve">
-    <value>General</value>
+    <value>Общее</value>
   </data>
   <data name="GenresText" xml:space="preserve">
-    <value>Genres:</value>
+    <value>Жанры:</value>
   </data>
   <data name="GPText" xml:space="preserve">
-    <value>Games path:</value>
+    <value>Путь для игр:</value>
   </data>
   <data name="IndieText" xml:space="preserve">
-    <value>Indie</value>
+    <value>Инди</value>
   </data>
   <data name="IPText" xml:space="preserve">
-    <value>Ip address of ftp server:</value>
+    <value>IP адресс ftp сервера:</value>
   </data>
   <data name="LanguageText" xml:space="preserve">
-    <value>Language</value>
+    <value>Языки:</value>
   </data>
   <data name="LibraryText" xml:space="preserve">
-    <value>Library</value>
+    <value>Библиотека</value>
   </data>
   <data name="LoginText" xml:space="preserve">
-    <value>Login</value>
+    <value>Логин: </value>
   </data>
   <data name="LogOutText" xml:space="preserve">
-    <value>Log out</value>
+    <value>Разлогиниться</value>
   </data>
   <data name="LogPasNotExist" xml:space="preserve">
-    <value>You have not entered your username and password</value>
+    <value>Вы не ввели свое имя пользователя и пароль</value>
   </data>
   <data name="MinimumText" xml:space="preserve">
-    <value>minimum requirements: </value>
+    <value>Минимальные требования:</value>
   </data>
   <data name="PasswordOrUserNameErrorText" xml:space="preserve">
-    <value>Password or username are not correct</value>
+    <value>Неверный пароль или имя пользователя</value>
   </data>
   <data name="PasswordText" xml:space="preserve">
-    <value>Password</value>
+    <value>Пароль</value>
   </data>
   <data name="PopularText" xml:space="preserve">
-    <value>Popular Games:</value>
+    <value>Популярные игры:</value>
   </data>
   <data name="PublisherText" xml:space="preserve">
-    <value>Publisher: </value>
+    <value>Издатель:</value>
   </data>
   <data name="PuzzleText" xml:space="preserve">
-    <value>Puzzle</value>
+    <value>Пазлы</value>
   </data>
   <data name="QuestionText" xml:space="preserve">
-    <value>Question</value>
+    <value>Вопрос</value>
   </data>
   <data name="RaceText" xml:space="preserve">
-    <value>Race</value>
+    <value>Гонки</value>
   </data>
   <data name="RecomandText" xml:space="preserve">
-    <value>Recommended requirements</value>
+    <value>Рекомендуемые требования</value>
   </data>
   <data name="RegistrationText" xml:space="preserve">
-    <value>Registration</value>
+    <value>Регистрация</value>
   </data>
   <data name="RPGText" xml:space="preserve">
     <value>RPG</value>
   </data>
   <data name="SaveText" xml:space="preserve">
-    <value>Save</value>
+    <value>Сохранить</value>
   </data>
   <data name="SearchText" xml:space="preserve">
-    <value>Search</value>
+    <value>Поиск</value>
   </data>
   <data name="SettingText" xml:space="preserve">
-    <value>Setting</value>
+    <value>Настройки</value>
   </data>
   <data name="ShopText" xml:space="preserve">
-    <value>Shop</value>
+    <value>Магазин</value>
   </data>
   <data name="UserNameText" xml:space="preserve">
-    <value>User name</value>
+    <value>Никнейм</value>
   </data>
   <data name="WrongLoginText" xml:space="preserve">
-    <value>The login already exists</value>
+    <value>Логин уже существует</value>
   </data>
 </root>

@@ -268,6 +268,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на The program has been downloaded.
+        /// </summary>
+        public static string DownloadCText {
+            get {
+                return ResourceManager.GetString("DownloadCText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Download.
         /// </summary>
         public static string DownloadText {

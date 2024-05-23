@@ -60,7 +60,7 @@ namespace GameShop.Frames
             Users user=entities.Users.Find(App.user.ID);
             user.Games += gamePage.ID + ";";
             entities.SaveChanges();
-            MessageBox.Show(Properties.Resources.ResourceManager.GetString("BoughtGameText"));
+            MessageBox.Show(Languages.Language.ResourceManager.GetString("BoughtGameText"));
         }
     }
 }

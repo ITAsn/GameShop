@@ -97,7 +97,7 @@ namespace GameShop.Win
                         }
                         else
                         {
-                            MessageBox.Show(Properties.Resources.ResourceManager.GetString("WrongLoginText"));
+                            MessageBox.Show(Languages.Language.ResourceManager.GetString("WrongLoginText"));
                         }
                        
                         
@@ -107,7 +107,7 @@ namespace GameShop.Win
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, Properties.Resources.ResourceManager.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(ex.Message, Languages.Language.ResourceManager.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else

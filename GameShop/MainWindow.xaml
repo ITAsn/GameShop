@@ -20,7 +20,7 @@
             <ColumnDefinition Width="20.321"/>
 
         </Grid.ColumnDefinitions>
-        <Menu Margin="0,0,0,416" Grid.RowSpan="2">
+        <Menu  >
             <MenuItem Header="{x:Static rs:Language.GeneralText}">
                 <MenuItem Click="MenuItem_Click" Header="{x:Static rs:Language.AddGameText}"></MenuItem>
                 <MenuItem Click="SettingOpen" Header="{x:Static rs:Language.SettingText}"></MenuItem>

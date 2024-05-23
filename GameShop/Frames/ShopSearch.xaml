@@ -59,7 +59,7 @@
                 <DataTemplate>
 
                     <StackPanel     Height="200" >
-                        <Image  Height="120" Margin="3" Source="{Binding Path}"/>
+                        <Image  Height="120" Margin="3" Source="{Binding Image}"/>
                         <TextBlock  Margin="3" TextWrapping="Wrap" Text="{Binding Name}"/>
                         <StackPanel Orientation="Horizontal">
                             <Label Margin="3" Content="{x:Static rs:Language.costText1}"/>

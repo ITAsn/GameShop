@@ -69,6 +69,7 @@ namespace GameShop.Frames
             {
                 searchText = searchText1.Text;
             }
+            shopList1.ItemsSource = null;
             shopList1.Items.Clear();
             for (int i = 0; i < games.Count; i++)
             {

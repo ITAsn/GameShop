@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using System.Net.NetworkInformation;
+using Microsoft.Toolkit.Uwp.Notifications;
 namespace GameShop.Frames
 {
     /// <summary>
@@ -60,7 +61,7 @@ namespace GameShop.Frames
             ima.Source = image1;
             // buttDow.IsEnabled = true;
             gameName.Text = selectedGame.Name; 
-            DI.Text = Properties.Resources.ResourceManager.GetString("PublisherText") + selectedGame.Publishers.PublisherName + "\n"+ Properties.Resources.ResourceManager.GetString("DeveloperText") + selectedGame.Developers.DeveloperName;
+            DI.Text = Languages.Language.ResourceManager.GetString("PublisherText") + selectedGame.Publishers.PublisherName + "\n"+ Languages.Language.ResourceManager.GetString("DeveloperText") + selectedGame.Developers.DeveloperName;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -185,7 +186,7 @@ namespace GameShop.Frames
                 responseStream.Close();
                 outputStream.Close();
                 response.Close();
-                MessageBox.Show("Готово");
+                new ToastContentBuilder().AddArgument("action", "viewConversation").AddArgument("conversationId",9813).AddText(selectedGame.Name).AddText(Languages.Language.ResourceManager.GetString("DownloadCText")).Show();
 
             }
             catch (Exception xe)
@@ -193,5 +194,6 @@ namespace GameShop.Frames
                 throw new Exception("Error downloading from URL " + "ftp://" + FTPServer + @"/" + remotePath + @"/" + fileNameToDownload, xe);
             }
         }
+        
     }
 }
