@@ -69,6 +69,7 @@ namespace GameShop.Win
                         {
 
                             App.user = users[0];
+                            if(!string.IsNullOrEmpty(App.user.Games))
                             App.user.Games = App.user.Games.Trim();
                             bd.SaveChanges();
                             MainWindow mainWindow = new MainWindow();

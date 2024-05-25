@@ -45,6 +45,26 @@ namespace GameShop.Frames
             OP2Text.Text = game.OP2;
             GPD2Text.Text = game.GDP2;
             D2Text.Text = game.D2;
+            bool p = false;
+            if (!string.IsNullOrEmpty(App.user.Games))
+            {
+                string[] games = App.user.Games.Split(';');
+
+                List<Games> gamesSQL = new List<Games>();
+                for (int i = 0; games.Length > i; i++)
+                {
+                    if (!string.IsNullOrEmpty(games[i]))
+                        if (games[0] == gamePage.ID.ToString())
+                        {
+                            p = true;
+                        }
+                }
+
+            }
+            if (p)
+            {
+                butt.IsEnabled = false;
+            }
 
         }
 

@@ -18,6 +18,8 @@ using System.Windows.Shapes;
 using System.Threading;
 using System.Net.NetworkInformation;
 using Microsoft.Toolkit.Uwp.Notifications;
+using System.IO.Compression;
+using Windows.UI.Xaml.Shapes;
 namespace GameShop.Frames
 {
     /// <summary>
@@ -33,7 +35,7 @@ namespace GameShop.Frames
         {
             InitializeComponent();
             myThread = new Thread(downloadF);
-            if (App.user.Games != "")
+            if (!string.IsNullOrEmpty(App.user.Games))
             {
                 string[] games = App.user.Games.Split(';');
 
@@ -178,14 +180,29 @@ namespace GameShop.Frames
                         }
                         App.main.progressBar1.Maximum = size1;
                         App.main.progressBar1.Value = position1;
-                       // App.main.prog.Text = position.ToString();
-});
+                        // App.main.prog.Text = position.ToString();
+                     
+                    });
                   
                 }
                 string statusDescription = response.StatusDescription;
                 responseStream.Close();
                 outputStream.Close();
                 response.Close();
+                //try
+                //{
+                //    // DirectoryInfo di = Directory.CreateDirectory(saveToLocalPath+"\\"+ fileNameToDownload.Remove(fileNameToDownload.Length-4));
+
+                    
+                //    //saveToLocalPath + @"\" + fileNameToDownload.Remove(fileNameToDownload.Length - 4) ;
+                //    ZipFile.ExtractToDirectory("C:\\Users\\AlFredo\\Desktop\\projects c\\GameShop\\GameShop\\bin\\Debug" + "\\" + fileNameToDownload.Remove(fileNameToDownload.Length - 4), saveToLocalPath+"\\"+fileNameToDownload
+                //    );
+                //}
+                //catch
+                //{
+
+                //}
+             
                 new ToastContentBuilder().AddArgument("action", "viewConversation").AddArgument("conversationId",9813).AddText(selectedGame.Name).AddText(Languages.Language.ResourceManager.GetString("DownloadCText")).Show();
 
             }

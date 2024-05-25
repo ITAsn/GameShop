@@ -17,7 +17,7 @@
             </StackPanel>
             <StackPanel Margin="5" Orientation="Horizontal">
                 <TextBlock Text="{x:Static rs:Language.GPText}" Margin="5"></TextBlock>
-                <TextBox Margin="5" Name="gamePathText" Width="150">C:\Program Files</TextBox>
+                <TextBox Margin="5" Name="gamePathText" Width="150">C:\GameShop</TextBox>
                 <Button Content="{x:Static rs:Language.ChooseText}" Margin="5" Click="Button_Click_1"></Button>
             </StackPanel>
             <StackPanel Margin="5" Orientation="Horizontal">

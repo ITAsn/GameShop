@@ -108,6 +108,7 @@ namespace GameShop
             GameAdd ga = new GameAdd();
             ga.ShowDialog();
 
+
         }
     }
     }

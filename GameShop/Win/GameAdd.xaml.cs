@@ -59,6 +59,7 @@ namespace GameShop.Win
         {
             Games games = new Games
             {
+                ID=Convert.ToInt32(iDTextBox.Text),
                 Name = nameTextBox.Text,
                 Path = pathTextBox.Text,
                 Cost = Convert.ToInt32(costTextBox.Text),
@@ -80,12 +81,13 @@ namespace GameShop.Win
             {
                 entities.Games.Add(games);
                 entities.SaveChanges();
+                DialogResult = true;
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            DialogResult = true;
+            
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

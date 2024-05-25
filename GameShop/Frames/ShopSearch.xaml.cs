@@ -76,7 +76,7 @@ namespace GameShop.Frames
                 if (games[i] != null)
                 {                  
                     
-                    if (games[i].Cost > c1 && games[i].Cost < c2 && games[i].Name.Contains(searchText))
+                    if (games[i].Cost >= c1 && games[i].Cost <= c2 && games[i].Name.Contains(searchText))
                     {
                         Games game = games[i];
                         shopList1.Items.Add(game);
