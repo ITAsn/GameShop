@@ -54,7 +54,7 @@ namespace GameShop.Frames
                 for (int i = 0; games.Length > i; i++)
                 {
                     if (!string.IsNullOrEmpty(games[i]))
-                        if (games[0] == gamePage.ID.ToString())
+                        if (games[i] == gamePage.ID.ToString())
                         {
                             p = true;
                         }
@@ -78,8 +78,9 @@ namespace GameShop.Frames
                 dateTime = DateTime.Now
             }) ;
             Users user=entities.Users.Find(App.user.ID);
-            user.Games += gamePage.ID + ";";
+            user.Games =user.Games.Trim()+ gamePage.ID + ";";
             entities.SaveChanges();
+            App.user = entities.Users.Find(App.user.ID);
             MessageBox.Show(Languages.Language.ResourceManager.GetString("BoughtGameText"));
         }
     }

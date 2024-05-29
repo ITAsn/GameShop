@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using GameShop.Frames;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -57,12 +58,15 @@ namespace GameShop.Win
         GameShopDBEntities entities = new GameShopDBEntities();
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            int id1 = entities.Games.ToList().Last().ID + 1;
+            string[] paths = pathTextBox.Text.Split('\\');
+            string path = paths[paths.Length - 1];
             Games games = new Games
             {
-                ID=Convert.ToInt32(iDTextBox.Text),
+                ID=id1,
                 Name = nameTextBox.Text,
-                Path = pathTextBox.Text,
-                Cost = Convert.ToInt32(costTextBox.Text),
+                Path = path,
+                Cost = 0,
                 Description = descriptionTextBox.Text,
                 Publisher = publisherTextBox.SelectedIndex,
                 Developer=developerTextBox.SelectedIndex,
@@ -82,6 +86,17 @@ namespace GameShop.Win
                 entities.Games.Add(games);
                 entities.SaveChanges();
                 DialogResult = true;
+                Shop shop = new Shop();
+                App.frame.Navigate(shop);
+                FtpDownUpl ftpDownUpl = new FtpDownUpl();
+                string FTPServer = App.adress;
+                string remotePath = "/";
+             //   string fileNameToUpload = selectedGame.Path;
+                string saveToLocalPath = App.PCPath;
+                string user = "Pro";
+                string password = "123456";
+                ftpDownUpl.Upload(FTPServer, remotePath,pathTextBox.Text,user,password );
+                MessageBox.Show("Ready");
             }
             catch(Exception ex)
             {
@@ -93,6 +108,62 @@ namespace GameShop.Win
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             DialogResult = false;
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog folderBrowser = new OpenFileDialog();
+            // Set validate names and check file exists to false otherwise windows will
+            // not let you select "Folder Selection."
+            folderBrowser.ValidateNames = false;
+            folderBrowser.CheckFileExists = false;
+            folderBrowser.CheckPathExists = true;
+            // Always default to Folder Selection.
+            folderBrowser.FileName = "Folder Selection.";
+            if (folderBrowser.ShowDialog() == true)
+            {
+                string folderPath = System.IO.Path.GetFullPath(folderBrowser.FileName);
+                pathTextBox.Text = folderPath ;
+            }
+        }
+
+        private void Add_Developer(object sender, RoutedEventArgs e)
+        {
+            SomeAdd someAdd = new SomeAdd(true);
+            
+            someAdd.ShowDialog();
+            if (someAdd.DialogResult==true)
+            {
+                publisherTextBox.ItemsSource = null;
+                developerTextBox.ItemsSource = null;
+                publisherTextBox.Items.Clear();
+                developerTextBox.Items.Clear();
+                publisherTextBox.ItemsSource = entities.Publishers.ToList();
+                developerTextBox.ItemsSource = entities.Developers.ToList();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void Add_Publisher(object sender, RoutedEventArgs e)
+        {
+            SomeAdd someAdd = new SomeAdd(false);
+            someAdd.ShowDialog();
+            if (someAdd.DialogResult == true)
+            {
+                publisherTextBox.ItemsSource = null;
+                developerTextBox.ItemsSource = null;
+                publisherTextBox.Items.Clear();
+                developerTextBox.Items.Clear();
+                publisherTextBox.ItemsSource = entities.Publishers.ToList();
+                developerTextBox.ItemsSource = entities.Developers.ToList();
+            }
+            else
+            {
+
+            }
         }
     }
 }

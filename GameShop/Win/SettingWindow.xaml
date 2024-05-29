@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GameShop.Win"
         mc:Ignorable="d"
         xmlns:rs="clr-namespace:GameShop.Languages"
-        Title="Settings" Height="450" Width="800">
+        Title="Settings" Height="450" Width="800" Style="{StaticResource ggg}">
     <Grid>
         <StackPanel>
             <TextBlock Margin="5" Text="{x:Static rs:Language.SettingText}"></TextBlock>

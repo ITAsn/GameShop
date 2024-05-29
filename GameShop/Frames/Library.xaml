@@ -29,7 +29,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="gameName"></TextBlock>
-                        <Button x:Name="buttDow" Content="{x:Static rs:Language.DownloadText}" Grid.Column="1"  Margin="5" HorizontalAlignment="Right"  Height="50" Click="Button_Click" IsEnabled="True" >
+                        <Button x:Name="buttDow" Content="{x:Static rs:Language.DownloadText}" Grid.Column="1"  Margin="5" HorizontalAlignment="Right"  Height="50" Click="Button_Click" IsEnabled="False" >
                             
                         </Button>
 

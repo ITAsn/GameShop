@@ -106,7 +106,7 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Add a game(admin).
+        ///   Ищет локализованную строку, похожую на Add a game.
         /// </summary>
         public static string AddGameText {
             get {
@@ -322,6 +322,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Free memory.
+        /// </summary>
+        public static string FMemory {
+            get {
+                return ResourceManager.GetString("FMemory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Is the ftp server not local?.
         /// </summary>
         public static string FTPSerQuestText {
@@ -430,6 +439,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Name.
+        /// </summary>
+        public static string NameText {
+            get {
+                return ResourceManager.GetString("NameText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Password or username are not correct.
         /// </summary>
         public static string PasswordOrUserNameErrorText {
@@ -448,11 +466,29 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Popular Games:.
+        ///   Ищет локализованную строку, похожую на Path:.
+        /// </summary>
+        public static string PathText {
+            get {
+                return ResourceManager.GetString("PathText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Free Games:.
         /// </summary>
         public static string PopularText {
             get {
                 return ResourceManager.GetString("PopularText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Processor.
+        /// </summary>
+        public static string ProcessorText {
+            get {
+                return ResourceManager.GetString("ProcessorText", resourceCulture);
             }
         }
         
@@ -493,6 +529,15 @@ namespace GameShop.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на RAM memory.
+        /// </summary>
+        public static string RamText {
+            get {
+                return ResourceManager.GetString("RamText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Recommended requirements.
         /// </summary>
         public static string RecomandText {
@@ -507,6 +552,24 @@ namespace GameShop.Languages {
         public static string RegistrationText {
             get {
                 return ResourceManager.GetString("RegistrationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Minimal requirements.
+        /// </summary>
+        public static string Requirements1Text {
+            get {
+                return ResourceManager.GetString("Requirements1Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Recomend requirements.
+        /// </summary>
+        public static string Requirements2Text {
+            get {
+                return ResourceManager.GetString("Requirements2Text", resourceCulture);
             }
         }
         
@@ -561,6 +624,15 @@ namespace GameShop.Languages {
         public static string UserNameText {
             get {
                 return ResourceManager.GetString("UserNameText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Video card.
+        /// </summary>
+        public static string VideoText {
+            get {
+                return ResourceManager.GetString("VideoText", resourceCulture);
             }
         }
         

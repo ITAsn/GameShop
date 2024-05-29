@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:GameShop.Win"
         xmlns:GameShop="clr-namespace:GameShop" x:Class="GameShop.Win.GameAdd"
      xmlns:rs="clr-namespace:GameShop.Languages"
-        mc:Ignorable="d"
-        Title="GameAdd" Height="527" Width="800" Loaded="Window_Loaded">
+        mc:Ignorable="d" Style="{StaticResource ggg}"
+        Title="{x:Static rs:Language.AddGameText}" Height="527" Width="800" Loaded="Window_Loaded">
     <Window.Resources>
         <GameShop:GameShopDBDataSet x:Key="gameShopDBDataSet"/>
         <CollectionViewSource x:Key="gamesViewSource" Source="{Binding Games, Source={StaticResource gameShopDBDataSet}}"/>
@@ -32,44 +32,63 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
 
             </Grid.RowDefinitions>
-            <Label Grid.Column="0" Content="ID:" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="iDTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="0" Content="Name:" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
-            <TextBox x:Name="nameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="0" Content="Path:" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
-            <TextBox x:Name="pathTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="0" Content="Cost:" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
-            <TextBox x:Name="costTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="3" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="0" Content="Description:" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
-            <TextBox x:Name="descriptionTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="4" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="0" Content="Developer:" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
-            <ComboBox DisplayMemberPath="DeveloperName" x:Name="developerTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="5" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="0" Content="Publisher:" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
-            <ComboBox DisplayMemberPath="PublisherName" x:Name="publisherTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="6" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="2" Content="CP 1:" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="cP1TextBox" Grid.Column="3" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="2" Content="OP 1:" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
-            <TextBox x:Name="oP1TextBox" Grid.Column="3" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="2" Content="GPD 1:" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
-            <TextBox x:Name="gPD1TextBox" Grid.Column="3" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="2" Content="D 1:" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
-            <TextBox x:Name="d1TextBox" Grid.Column="3" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="3" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="2" Content="CP 2:" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
-            <TextBox x:Name="cP2TextBox" Grid.Column="3" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="4" Text="" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="2" Content="OP 2:" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
-            <TextBox x:Name="oP2TextBox" Grid.Column="3" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="5" VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="2" Content="GDP 2:" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
-            <TextBox x:Name="gDP2TextBox" Grid.Column="3" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="6"  VerticalAlignment="Center" Width="120"/>
-            <Label Grid.Column="2" Content="D 2:" HorizontalAlignment="Left" Margin="3" Grid.Row="7" VerticalAlignment="Center"/>
-            <TextBox x:Name="d2TextBox" Grid.Column="3" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="7" VerticalAlignment="Center" Width="120"/>
-            <TextBlock Grid.Column="4" Text="{x:Static rs:Language.ChooseImageText}"></TextBlock>
-            <Button Grid.Column="4" Grid.Row="1" Height="20" Click="Button_Click" Content="{x:Static rs:Language.ChooseImageText}"></Button>
-            <Image Grid.Column="4" Grid.Row="1" Grid.RowSpan="8" Height="150" Name="iamgeI"></Image>
+            <Label FontSize="14" Content="{x:Static rs:Language.AddGameText}"  ></Label>
+            <Label Grid.Column="0" Content="{x:Static rs:Language.NameText}" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBox x:Name="nameTextBox" Grid.Column="1" HorizontalAlignment="Center" Height="NaN" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
+            <Label Grid.Column="0" Content="{x:Static rs:Language.PathText}" HorizontalAlignment="Left" Margin="3,0,0,0" Grid.Row="2" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="2"  Grid.Column="1" >
+                <TextBox x:Name="pathTextBox"  HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" VerticalAlignment="Center" Width="60"/>
+                <Button Margin="3" Width="30" Click="Button_Click_3">...</Button>
+            </StackPanel>
+            <Label IsEnabled="False" Grid.Column="0" Content="{x:Static rs:Language.costText1}" HorizontalAlignment="Left" Margin="3,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
+            <TextBox IsEnabled="False" x:Name="costTextBox" Grid.Column="1" HorizontalAlignment="Center" Height="NaN" Grid.Row="3" VerticalAlignment="Center" Width="120"/>
+            <Label Grid.Column="2" Content="{x:Static rs:Language.descriptionText1}" HorizontalAlignment="Left" Margin="3,0,0,0" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="descriptionTextBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" Height="150" Grid.RowSpan="6" VerticalAlignment="Center" Width="120"/>
+            <Label Grid.Column="0" Content="{x:Static rs:Language.DeveloperText}" HorizontalAlignment="Left" Margin="3,0,0,0" Grid.Row="5" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="5">
+                <ComboBox DisplayMemberPath="DeveloperName" x:Name="developerTextBox"  HorizontalAlignment="Center" Height="NaN"  VerticalAlignment="Center" Width="120"/>
+                <Button Margin="3" Click="Add_Developer">+</Button>
+            </StackPanel>
+            <Label Grid.Column="0" Content="{x:Static rs:Language.PublisherText}" HorizontalAlignment="Left" Margin="3,0,0,0" Grid.Row="6" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal"  Grid.Column="1" Grid.Row="6">
+                <ComboBox DisplayMemberPath="PublisherName" x:Name="publisherTextBox" Grid.Column="1" HorizontalAlignment="Center" Height="NaN" Grid.Row="6" VerticalAlignment="Center" Width="120"/>
+                <Button Margin="3" Click="Add_Publisher">+</Button>
 
-            <Button Height="20" Grid.Row="8" Click="Button_Click_1" Content="{x:Static rs:Language.AddText}"></Button>
-            <Button Height="20" Grid.Row="8" Grid.Column="2" Click="Button_Click_2" Content="{x:Static rs:Language.CancelText}"></Button>
+            </StackPanel>
+            <Label Grid.Column="0" Grid.Row="9" Content="{x:Static rs:Language.ProcessorText}" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Center"/>
+            <TextBox x:Name="cP1TextBox" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Center" Height="NaN" VerticalAlignment="Center" Width="120"/>
+            <Label Grid.Column="0" Grid.Row="10" Content="{x:Static rs:Language.RamText}" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Center"/>
+            <TextBox x:Name="oP1TextBox" Grid.Column="1" HorizontalAlignment="Center" Height="NaN" Grid.Row="10" VerticalAlignment="Center" Width="120"/>
+            <Label Grid.Column="0" Grid.Row="11" Content="{x:Static rs:Language.VideoText}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="gPD1TextBox" Grid.Column="1" HorizontalAlignment="Center" Height="NaN" Grid.Row="11" VerticalAlignment="Center" Width="120"/>
+            <Label Grid.Column="0" Grid.Row="12" Content="{x:Static rs:Language.FMemory}" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Center"/>
+            <TextBox x:Name="d1TextBox" Grid.Column="1" HorizontalAlignment="Center" Height="NaN" Grid.Row="12" VerticalAlignment="Center" Width="120"/>
+            <Label Grid.Column="2" Content="{}" Grid.Row="9" HorizontalAlignment="Left" Margin="3,0,0,0"  VerticalAlignment="Center"/>
+            <TextBox x:Name="cP2TextBox" Grid.Column="3" HorizontalAlignment="Center" Height="NaN" Grid.Row="9" Text="" VerticalAlignment="Center" Width="120"/>
+            <Label Grid.Column="2" Content="{}" Grid.Row="10" HorizontalAlignment="Left" Margin="3,0,0,0"  VerticalAlignment="Center"/>
+            <TextBox x:Name="oP2TextBox" Grid.Column="3" HorizontalAlignment="Center" Height="NaN" Grid.Row="10" VerticalAlignment="Center" Width="120"/>
+            <Label Grid.Column="2" Content="{}" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox x:Name="gDP2TextBox" Grid.Column="3" HorizontalAlignment="Center" Height="NaN" Grid.Row="11"  VerticalAlignment="Center" Width="120"/>
+            <Label Grid.Column="2" Content="{}" Grid.Row="12" HorizontalAlignment="Left" Margin="3,0,0,0"  VerticalAlignment="Center"/>
+            <TextBox x:Name="d2TextBox" Grid.Column="3" HorizontalAlignment="Center" Height="NaN" Grid.Row="12" VerticalAlignment="Center" Width="120"/>
+            <TextBlock Grid.Column="3" Text="{x:Static rs:Language.ChooseImageText}" FontFamily="Book Antiqua"  ></TextBlock>
+            <Button Grid.Column="3" Grid.Row="1" Height="20" Click="Button_Click" Content="{x:Static rs:Language.ChooseImageText}" Margin="0,6,0,6"></Button>
+            <Image Grid.Column="3" Grid.Row="2" Grid.RowSpan="6" Height="150" Name="iamgeI" Margin="0,15,0,20"></Image>
+           
+            <Label Content="{x:Static rs:Language.Requirements1Text}" Grid.Row="7"></Label>
+            <Label Content="{x:Static rs:Language.Requirements2Text}" Grid.Row="7" Grid.Column="2"></Label>
+            <Button Height="20" Grid.Row="13" Grid.Column="2" Click="Button_Click_2" Content="{x:Static rs:Language.CancelText}"/>
+            <Button Height="20" Grid.Row="13" Click="Button_Click_1" Content="{x:Static rs:Language.AddText}" VerticalAlignment="Center"/>
+
         </Grid>
 
     </Grid>

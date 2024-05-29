@@ -54,6 +54,7 @@ namespace GameShop.Frames
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            buttDow.IsEnabled = true;
             selectedGame = listBox.SelectedItem as Games;
             MemoryStream byteStream = new MemoryStream(selectedGame.Image);
             BitmapImage image1 = new BitmapImage();
@@ -92,7 +93,7 @@ namespace GameShop.Frames
 
                 request1.Method = WebRequestMethods.Ftp.GetFileSize;
                 FtpWebResponse response1 = (FtpWebResponse)request1.GetResponse();
-                float size = response1.ContentLength;
+                double size = response1.ContentLength;
                 response1.Close();
                 //Get FTP web resquest object.
                 FtpWebRequest request = FtpWebRequest.Create(new Uri(@"ftp://" + FTPServer + @"/" + remotePath + @"/" + fileNameToDownload)) as FtpWebRequest;
@@ -113,26 +114,27 @@ namespace GameShop.Frames
                 int readCount;
                 byte[] buffer = new byte[bufferSize]; 
                 string rSize = "";
-                float size1 = size;
+                float size1 = (float)size;
                 if (size / 1024 > 1)
                 {
                     if (size / 1024 / 1024 > 1)
                     {
                         if (size / 1024 / 1024 / 1024 > 1)
                         {
-                            size = size / 1024 / 1024 / 1024;
+                            
+                            size = Math.Round((size / 1024 / 1024 / 1024),2);
                             rSize = size.ToString() + "GB";
 
                         }
                         else
                         {
-                            size = size / 1024 / 1024;
+                            size = Math.Round((size / 1024 / 1024),2);
                             rSize = size.ToString() + " MB";
                         }
                     }
                     else
                     {
-                        size = size / 1024;
+                        size = Math.Round((size / 1024),2);
                         rSize = size.ToString() + "KB";
                     }
                 }
@@ -141,6 +143,7 @@ namespace GameShop.Frames
 
                     rSize = size.ToString() + "B";
                 }
+               
                 
                 readCount = responseStream.Read(buffer, 0, bufferSize);
                 while (readCount > 0)
@@ -149,7 +152,7 @@ namespace GameShop.Frames
                     readCount = responseStream.Read(buffer, 0, bufferSize);
                     this.Dispatcher.Invoke(() =>
                     {
-                         float position = (outputStream.Position);
+                        double position =Convert.ToDouble(outputStream.Position);
                         var position1 = (outputStream.Position);
                         if (position / 1024 > 1)
                         {
@@ -157,19 +160,19 @@ namespace GameShop.Frames
                             {
                                 if (position / 1024 / 1024/1024  > 1)
                                 {
-                                    position =position / 1024 / 1024/1024;
+                                    position = Math.Round((position / 1024 / 1024/1024),2);
                                     App.main.prog.Text = position.ToString() + "GB"+$"/{rSize}";
 
                                 }
                                 else
                                 {
-                                    position = position / 1024 / 1024;
+                                    position = Math.Round((position / 1024 / 1024),2);
                                     App.main.prog.Text = position.ToString() + " MB" + $"/{rSize}";
                                 }
                             }
                             else
                             {
-                                position = position / 1024;
+                                position = Math.Round((position / 1024),2);
                                 App.main.prog.Text = position.ToString() + "KB" + $"/{rSize}";
                             }
                         }

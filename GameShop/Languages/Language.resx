@@ -133,7 +133,7 @@
     <value>Action</value>
   </data>
   <data name="AddGameText" xml:space="preserve">
-    <value>Add a game(admin)</value>
+    <value>Add a game</value>
   </data>
   <data name="AddText" xml:space="preserve">
     <value>Add</value>
@@ -204,6 +204,9 @@
   <data name="ExitText" xml:space="preserve">
     <value>Do you really want to get out?</value>
   </data>
+  <data name="FMemory" xml:space="preserve">
+    <value>Free memory</value>
+  </data>
   <data name="FTPSerQuestText" xml:space="preserve">
     <value>Is the ftp server not local?</value>
   </data>
@@ -240,14 +243,23 @@
   <data name="MinimumText" xml:space="preserve">
     <value>minimum requirements: </value>
   </data>
+  <data name="NameText" xml:space="preserve">
+    <value>Name</value>
+  </data>
   <data name="PasswordOrUserNameErrorText" xml:space="preserve">
     <value>Password or username are not correct</value>
   </data>
   <data name="PasswordText" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="PathText" xml:space="preserve">
+    <value>Path:</value>
+  </data>
   <data name="PopularText" xml:space="preserve">
-    <value>Popular Games:</value>
+    <value>Free Games:</value>
+  </data>
+  <data name="ProcessorText" xml:space="preserve">
+    <value>Processor</value>
   </data>
   <data name="PublisherText" xml:space="preserve">
     <value>Publisher: </value>
@@ -261,11 +273,20 @@
   <data name="RaceText" xml:space="preserve">
     <value>Race</value>
   </data>
+  <data name="RamText" xml:space="preserve">
+    <value>RAM memory</value>
+  </data>
   <data name="RecomandText" xml:space="preserve">
     <value>Recommended requirements</value>
   </data>
   <data name="RegistrationText" xml:space="preserve">
     <value>Registration</value>
+  </data>
+  <data name="Requirements1Text" xml:space="preserve">
+    <value>Minimal requirements</value>
+  </data>
+  <data name="Requirements2Text" xml:space="preserve">
+    <value>Recomend requirements</value>
   </data>
   <data name="RPGText" xml:space="preserve">
     <value>RPG</value>
@@ -284,6 +305,9 @@
   </data>
   <data name="UserNameText" xml:space="preserve">
     <value>User name</value>
+  </data>
+  <data name="VideoText" xml:space="preserve">
+    <value>Video card</value>
   </data>
   <data name="WrongLoginText" xml:space="preserve">
     <value>The login already exists</value>

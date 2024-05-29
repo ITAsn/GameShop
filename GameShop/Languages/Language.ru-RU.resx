@@ -133,7 +133,7 @@
     <value>Action</value>
   </data>
   <data name="AddGameText" xml:space="preserve">
-    <value>Добавит игру(админ)</value>
+    <value>Добавить игру</value>
   </data>
   <data name="AddText" xml:space="preserve">
     <value>Добавить</value>
@@ -204,6 +204,9 @@
   <data name="ExitText" xml:space="preserve">
     <value>Вы действительно хотите выйти</value>
   </data>
+  <data name="FMemory" xml:space="preserve">
+    <value>Свободное пространство</value>
+  </data>
   <data name="FTPSerQuestText" xml:space="preserve">
     <value>Ваш ftp Сервер не локальный?</value>
   </data>
@@ -240,14 +243,23 @@
   <data name="MinimumText" xml:space="preserve">
     <value>Минимальные требования:</value>
   </data>
+  <data name="NameText" xml:space="preserve">
+    <value>Название</value>
+  </data>
   <data name="PasswordOrUserNameErrorText" xml:space="preserve">
     <value>Неверный пароль или имя пользователя</value>
   </data>
   <data name="PasswordText" xml:space="preserve">
     <value>Пароль</value>
   </data>
+  <data name="PathText" xml:space="preserve">
+    <value>Путь</value>
+  </data>
   <data name="PopularText" xml:space="preserve">
-    <value>Популярные игры:</value>
+    <value>Бесплатные игры:</value>
+  </data>
+  <data name="ProcessorText" xml:space="preserve">
+    <value>Процессор</value>
   </data>
   <data name="PublisherText" xml:space="preserve">
     <value>Издатель:</value>
@@ -261,11 +273,20 @@
   <data name="RaceText" xml:space="preserve">
     <value>Гонки</value>
   </data>
+  <data name="RamText" xml:space="preserve">
+    <value>Оперативная память</value>
+  </data>
   <data name="RecomandText" xml:space="preserve">
     <value>Рекомендуемые требования</value>
   </data>
   <data name="RegistrationText" xml:space="preserve">
     <value>Регистрация</value>
+  </data>
+  <data name="Requirements1Text" xml:space="preserve">
+    <value>Минимальные требования</value>
+  </data>
+  <data name="Requirements2Text" xml:space="preserve">
+    <value>Рекомендуемые требования</value>
   </data>
   <data name="RPGText" xml:space="preserve">
     <value>RPG</value>
@@ -284,6 +305,9 @@
   </data>
   <data name="UserNameText" xml:space="preserve">
     <value>Никнейм</value>
+  </data>
+  <data name="VideoText" xml:space="preserve">
+    <value>Видеокарта</value>
   </data>
   <data name="WrongLoginText" xml:space="preserve">
     <value>Логин уже существует</value>
