@@ -77,8 +77,14 @@ namespace GameShop.Frames
                 LogText = $"{App.user.Login} bought {gamePage.ID}",
                 dateTime = DateTime.Now
             }) ;
+           
             Users user=entities.Users.Find(App.user.ID);
+            if(user.Games!=null)
             user.Games =user.Games.Trim()+ gamePage.ID + ";";
+            else
+            {
+                user.Games = gamePage.ID + ";";
+            }
             entities.SaveChanges();
             App.user = entities.Users.Find(App.user.ID);
             MessageBox.Show(Languages.Language.ResourceManager.GetString("BoughtGameText"));
