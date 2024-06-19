@@ -63,7 +63,7 @@ namespace GameShop.Win
                 try
                 {
                    List<Users> users = bd.Users.Where(c => c.Login == loginText.Text).ToList();
-                    if (users != null)
+                    if (users.Count != 0)
                     {
                         if (users[0].Passw == passwordText.Password)
                         {

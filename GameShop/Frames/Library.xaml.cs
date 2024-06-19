@@ -77,6 +77,7 @@ namespace GameShop.Frames
         }
         void downloadF()
         {
+            buttDow.IsEnabled = false;
             string FTPServer = App.adress;
             string remotePath = "/";
             string fileNameToDownload = selectedGame.Path;
@@ -213,6 +214,7 @@ namespace GameShop.Frames
             {
                 throw new Exception("Error downloading from URL " + "ftp://" + FTPServer + @"/" + remotePath + @"/" + fileNameToDownload, xe);
             }
+            buttDow.IsEnabled = true;
         }
         
     }

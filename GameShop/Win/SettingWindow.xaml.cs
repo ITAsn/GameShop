@@ -28,7 +28,9 @@ namespace GameShop.Win
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if(!string.IsNullOrEmpty(ipText.Text))
             App.adress = ipText.Text;
+            if (!string.IsNullOrEmpty(gamePathText.Text))
             App.PCPath = gamePathText.Text;
            
         }

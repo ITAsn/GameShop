@@ -45,14 +45,18 @@ namespace GameShop.Win
         {
             OpenFileDialog openFileDialog = new OpenFileDialog(); // создаем диалоговое окно
             openFileDialog.ShowDialog(); // показываем
-          image_bytes = File.ReadAllBytes(openFileDialog.FileName); // получаем байты выбранного файла
+            if (!string.IsNullOrEmpty(openFileDialog.FileName))
+            {
+                image_bytes = File.ReadAllBytes(openFileDialog.FileName); // получаем байты выбранного файла
 
-            MemoryStream byteStream = new MemoryStream(image_bytes);
-            BitmapImage image = new BitmapImage();
-            image.BeginInit();
-            image.StreamSource = byteStream;
-            image.EndInit();
-            iamgeI.Source = image;
+                MemoryStream byteStream = new MemoryStream(image_bytes);
+                BitmapImage image = new BitmapImage();
+                image.BeginInit();
+                image.StreamSource = byteStream;
+                image.EndInit();
+                iamgeI.Source = image;
+            }
+       
 
         }
         GameShopDBEntities entities = new GameShopDBEntities();

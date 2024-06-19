@@ -85,6 +85,7 @@ namespace GameShop.Win
                                 entities.Users.Add(users);
                                 entities.Logs.Add(new Logs
                                 {
+                                    IdLog=entities.Logs.ToList().Last().IdLog+1,
                                     dateTime = DateTime.Now,
                                     LogText = $"{users.Login} was created",
 
