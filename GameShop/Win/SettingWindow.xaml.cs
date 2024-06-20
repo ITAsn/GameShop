@@ -24,6 +24,7 @@ namespace GameShop.Win
         public SettingWindow()
         {
             InitializeComponent();
+            gamePathText.Text = App.PCPath;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
